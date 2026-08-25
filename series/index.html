@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>All India All Institute Test Series | SRINEET</title>
+
+    <meta
+        name="description"
+        content="SRINEET All India All Institute NEET Test Series"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* ================================
+           ROOT
+        ================================= */
+
+        :root {
+
+            --blue: #1264e8;
+            --blue-dark: #073c9d;
+            --blue-light: #edf5ff;
+
+            --text: #10213f;
+            --muted: #718096;
+
+            --white: #ffffff;
+            --background: #f6f9fd;
+
+            --border: #e2eaf4;
+
+        }
+
+
+        /* ================================
+           RESET
+        ================================= */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            font-family: "Inter", sans-serif;
+
+            background: var(--background);
+
+            color: var(--text);
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+
+        }
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+
+        .container {
+
+            width:
+                min(
+                    1120px,
+                    calc(100% - 36px)
+                );
+
+            margin: auto;
+
+        }
+
+
+        /* ================================
+           HEADER
+        ================================= */
+
+        .header {
+
+            height: 76px;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            background:
+                rgba(255,255,255,0.94);
+
+            border-bottom:
+                1px solid var(--border);
+
+            backdrop-filter:
+                blur(16px);
+
+        }
+
+
+        .nav {
+
+            height: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+        }
+
+
+        .logo-icon {
+
+            width: 38px;
+
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 11px;
+
+            color: white;
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size: 19px;
+
+            font-weight: 800;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #2b88ff,
+                    #0752c8
+                );
+
+            box-shadow:
+
+                inset
+                0 2px 3px
+                rgba(255,255,255,0.35),
+
+                0 7px 15px
+                rgba(18,100,232,0.25);
+
+        }
+
+
+        .logo-name {
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+            letter-spacing: -0.5px;
+
+        }
+
+
+        .back-button {
+
+            padding:
+                8px 13px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 10px;
+
+            background: white;
+
+            color: var(--blue);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .back-button:hover {
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 8px 20px
+                rgba(18,100,232,0.10);
+
+        }
+
+
+        /* ================================
+           HERO
+        ================================= */
+
+        .hero {
+
+            padding:
+                55px 0 32px;
+
+        }
+
+
+        .eyebrow {
+
+            color: var(--blue);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.8px;
+
+        }
+
+
+        .hero h1 {
+
+            max-width: 800px;
+
+            margin-top: 7px;
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size: 42px;
+
+            line-height: 1.08;
+
+            letter-spacing: -1.7px;
+
+        }
+
+
+        .hero p {
+
+            max-width: 650px;
+
+            margin-top: 13px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+        }
+
+
+        /* ================================
+           SECTION TOP
+        ================================= */
+
+        .section-heading {
+
+            margin-bottom: 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+        }
+
+
+        .section-heading h2 {
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size: 17px;
+
+            letter-spacing: -0.4px;
+
+        }
+
+
+        .institute-count {
+
+            padding:
+                6px 10px;
+
+            border-radius: 30px;
+
+            background:
+                var(--blue-light);
+
+            color: var(--blue);
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+        }
+
+
+        /* ================================
+           INSTITUTE SECTION
+        ================================= */
+
+        .institutes {
+
+            padding:
+                0 0 90px;
+
+        }
+
+
+        .institute-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        /* ================================
+           INSTITUTE CARD
+        ================================= */
+
+        .institute-card {
+
+            position: relative;
+
+            min-height: 275px;
+
+            padding: 26px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            overflow: hidden;
+
+            background:
+                var(--white);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 23px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(16,33,63,0.045);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+
+        }
+
+
+        .institute-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            border-color:
+                #c6d9f1;
+
+            box-shadow:
+                0 25px 55px
+                rgba(18,100,232,0.13);
+
+        }
+
+
+        /* ================================
+           CARD TOP
+        ================================= */
+
+        .card-top {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .institute-number {
+
+            color: #9aabc2;
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+        }
+
+
+        .institute-icon {
+
+            width: 54px;
+
+            height: 54px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 16px;
+
+            color: var(--blue);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #f3f8ff,
+                    #e1efff
+                );
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            box-shadow:
+
+                0 5px 0
+                #cbdcf1;
+
+        }
+
+
+        /* ================================
+           CARD CONTENT
+        ================================= */
+
+        .institute-card h2 {
+
+            margin-top: 27px;
+
+            font-family:
+                "Manrope", sans-serif;
+
+            font-size: 24px;
+
+            line-height: 1.15;
+
+            letter-spacing: -0.8px;
+
+        }
+
+
+        .institute-card p {
+
+            margin-top: 8px;
+
+            color: var(--muted);
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* ================================
+           BUTTON
+        ================================= */
+
+        .open-button {
+
+            width: fit-content;
+
+            margin-top: 20px;
+
+            padding:
+                11px 14px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 17px;
+
+            border-radius: 10px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #1264e8,
+                    #0750c5
+                );
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            box-shadow:
+
+                0 4px 0
+                #073c9d,
+
+                0 9px 18px
+                rgba(18,100,232,0.18);
+
+            transition:
+                transform 0.2s ease;
+
+        }
+
+
+        .open-button span {
+
+            font-size: 15px;
+
+            transition:
+                transform 0.2s ease;
+
+        }
+
+
+        .institute-card:hover
+        .open-button {
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        .institute-card:hover
+        .open-button span {
+
+            transform:
+                translateX(4px);
+
+        }
+
+
+        /* ================================
+           FUTURE CARD
+        ================================= */
+
+        .future-card {
+
+            border:
+                1px dashed
+                #b9cae0;
+
+            background:
+                #fbfdff;
+
+        }
+
+
+        .future-card
+        .institute-icon {
+
+            color:
+                #8091a8;
+
+            background:
+                #f0f4f8;
+
+            box-shadow:
+                0 5px 0 #dbe3ec;
+
+        }
+
+
+        .future-card
+        .open-button {
+
+            color:
+                var(--blue);
+
+            background:
+                #edf5ff;
+
+            box-shadow:
+                0 4px 0 #c8dbf3;
+
+        }
+
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        .footer {
+
+            padding:
+                28px 0;
+
+            text-align: center;
+
+            background:
+                white;
+
+            border-top:
+                1px solid var(--border);
+
+        }
+
+
+        .footer p {
+
+            color: var(--muted);
+
+            font-size: 10px;
+
+        }
+
+
+        /* ================================
+           TABLET
+        ================================= */
+
+        @media (max-width: 850px) {
+
+            .institute-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        /* ================================
+           MOBILE
+        ================================= */
+
+        @media (max-width: 560px) {
+
+            .container {
+
+                width:
+                    min(
+                        100% - 28px,
+                        1120px
+                    );
+
+            }
+
+
+            .header {
+
+                height: 68px;
+
+            }
+
+
+            .logo-name {
+
+                font-size: 17px;
+
+            }
+
+
+            .logo-icon {
+
+                width: 34px;
+
+                height: 34px;
+
+            }
+
+
+            .hero {
+
+                padding:
+                    40px 0 27px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 31px;
+
+                letter-spacing: -1.2px;
+
+            }
+
+
+            .hero p {
+
+                font-size: 13px;
+
+            }
+
+
+            .section-heading h2 {
+
+                font-size: 15px;
+
+            }
+
+
+            .institute-grid {
+
+                grid-template-columns:
+                    1fr;
+
+                gap: 14px;
+
+            }
+
+
+            .institute-card {
+
+                min-height: 255px;
+
+                padding: 23px;
+
+                border-radius: 20px;
+
+            }
+
+
+            .institute-card h2 {
+
+                font-size: 25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================
+         HEADER
+    =================================== -->
+
+    <header class="header">
+
+        <div class="container nav">
+
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    S
+                </span>
+
+                <span class="logo-name">
+                    SRINEET
+                </span>
+
+            </a>
+
+
+            <a
+                href="../index.html"
+                class="back-button"
+            >
+                ← HOME
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================
+         HERO
+    =================================== -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <span class="eyebrow">
+                NEET TEST SERIES
+            </span>
+
+
+            <h1>
+                All India All Institute
+                Test Series
+            </h1>
+
+
+            <p>
+                Explore NEET test series from
+                multiple preparation platforms and
+                institutes — all in one place.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================
+         INSTITUTES
+    =================================== -->
+
+    <section class="institutes">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <h2>
+                    Select an Institute
+                </h2>
+
+
+                <span class="institute-count">
+                    10 INSTITUTES
+                </span>
+
+            </div>
+
+
+
+            <div class="institute-grid">
+
+
+                <!-- ==================================
+                     01 ALLEN
+                =================================== -->
+
+                <a
+                    href="allen/index.html"
+                    class="institute-card"
+                >
+
+                    <div>
+
+                        <div class="card-top">
+
+                            <span class="institute-number">
+                                01
+                            </span>
+
+
+                            <div class="institute-icon">
+                                ALLEN
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            ALLEN
+                        </h2>
+
+
+                        <p>
+                            NEET test series and
+                            examination practice.
+                        </p>
+
+                    </div>
+
+
+                    <span class="open-button">
+
+                        View Series
+
+                        <span>→</span>
+
+                    </span>
+
+                </a>
+
+
+
+                <!-- ==================================
+                     02 AAKASH
+                =================================== -->
+
+                <a
+                    href="aakash/index.html"
+                    class="institute-card"
+                >
+
+                    <div>
+
+                        <div class="card-top">
+
+                            <span class="institute-number">
+                                02
+                            </span>
+
+
+                            <div class="institute-icon">
+                                AAKASH
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            Aakash
+                        </h2>
+
+
+                        <p>
+                            NEET test series and
+                            examination practice.
+                        </p>
+
+                    </div>
+
+
+                    <span class="open-button">
+
+                        View Series
+
+                        <span>→</span>
+
+                    </span>
+
+                </a>
+
+
+
+                <!-- ==================================
+                     03 PW
+                =================================== -->
+
+                <a
+                    href="pw/index.html"
+                    class="institute-card"
+                >
+
+                    <div>
+
+                        <div class="card-top">
+
+                            <span class="institute-number">
+                                03
+                            </span>
+
+
+                            <div class="institute-icon">
+                                PW
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            Physics Wallah
+                        </h2>
+
+
+                        <p>
+                            NEET test series and
+                            examination practice.
+                        </p>
+
+                    </div>
+
+
+                    <span class="open-button">
+
+                        View Series
+
+                        <span>→</span>
+
+                    </span>
+
+                </a>
+
+
+
+                <!-- ==================================
+                     04 RESONANCE
+                =================================== -->
+
+                <a
+                    href="resonance/index.html"
+                    class="institute-card"
+                >
+
+                    <div>
+
+                        <div class="card-top">
+
+                            <span class="institute-number">
+                                04
+                            </span>
+
+
+                            <div class="institute-icon">
+                                R
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            Resonance
+                        </h2>
+
+
+                        <p>
+                            NEET test series and
+                            examination practice.
+                        </p>
+
+                    </div>
+
+
+                    <span class="open-button">
+
+                        View Series
+
+                        <span>→</span>
+
+                    </span>
+
+                </a>
+
+
+
+                <!-- ==================================
+                     05 NARAYANA
+                =================================== -->
+
+                <a
+                    href="narayana/index.html"
+                    class="institute-card"
+                >
+
+                    <div>
+
+                        <div class="card-top">
+
+                            <span class="institute-number">
+                                05
+                            </span>
+
+
+                            <div class="institute-icon">
+                                N
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            Narayana
+                        </h2>
+
+
+                        <p>
+                            NEET test series and
+                            examination practice.
+                        </p>
+
+                    </div>
+
+
+                    <span class="open-button">
+
+                        View Series
+
+                        <span>→</span>
+
+                    </span>
+
+                </a>
+
+
+
+                <!-- ==================================
+                     06 MOTION
+                =================================== -->
+
+                <a
+                    href="motion/index.html"
+                    class="institute-card"
+                >
+
+    
