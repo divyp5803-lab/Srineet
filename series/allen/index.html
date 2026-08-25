@@ -1,1 +1,640 @@
-<!-- ALLEN TEST SERIES -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>ALLEN | SRINEET</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+rel="stylesheet"
+>
+
+<style>
+
+:root{
+
+--blue:#1264e8;
+--dark:#073c9d;
+--light:#edf5ff;
+--text:#10213f;
+--muted:#718096;
+--bg:#f6f9fd;
+--border:#e2eaf4;
+--white:#ffffff;
+
+}
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+body{
+
+font-family:"Inter",sans-serif;
+background:var(--bg);
+color:var(--text);
+
+}
+
+a{
+
+text-decoration:none;
+color:inherit;
+
+}
+
+.container{
+
+width:min(1050px,calc(100% - 32px));
+margin:auto;
+
+}
+
+/* HEADER */
+
+header{
+
+height:72px;
+background:rgba(255,255,255,.95);
+border-bottom:1px solid var(--border);
+position:sticky;
+top:0;
+z-index:10;
+backdrop-filter:blur(15px);
+
+}
+
+.nav{
+
+height:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+}
+
+.logo-icon{
+
+width:38px;
+height:38px;
+border-radius:11px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:linear-gradient(
+145deg,
+#2b88ff,
+#0752c8
+);
+
+color:white;
+
+font-family:"Manrope";
+font-weight:800;
+font-size:19px;
+
+box-shadow:
+0 5px 0 #073c9d,
+0 9px 20px rgba(18,100,232,.18);
+
+}
+
+.logo-text{
+
+font-family:"Manrope";
+font-weight:800;
+font-size:19px;
+
+}
+
+.back{
+
+padding:8px 12px;
+
+border:1px solid var(--border);
+border-radius:9px;
+
+font-size:9px;
+font-weight:800;
+
+color:var(--blue);
+background:white;
+
+}
+
+/* HERO */
+
+.hero{
+
+padding:48px 0 30px;
+
+}
+
+.eyebrow{
+
+font-size:10px;
+font-weight:800;
+letter-spacing:2px;
+color:var(--blue);
+
+}
+
+.hero h1{
+
+font-family:"Manrope";
+
+font-size:43px;
+line-height:1.1;
+
+letter-spacing:-1.7px;
+
+margin-top:7px;
+
+}
+
+.hero p{
+
+margin-top:10px;
+
+font-size:13px;
+color:var(--muted);
+
+max-width:600px;
+
+}
+
+/* BRAND */
+
+.brand{
+
+margin-top:25px;
+
+padding:20px;
+
+background:white;
+
+border:1px solid var(--border);
+
+border-radius:20px;
+
+display:flex;
+align-items:center;
+gap:17px;
+
+box-shadow:
+0 12px 35px rgba(16,33,63,.05);
+
+}
+
+.brand-icon{
+
+width:58px;
+height:58px;
+
+border-radius:16px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:linear-gradient(
+145deg,
+#f2f7ff,
+#e1efff
+);
+
+color:var(--blue);
+
+font-family:"Manrope";
+font-size:11px;
+font-weight:800;
+
+box-shadow:
+0 5px 0 #cbdcf1;
+
+}
+
+.brand h2{
+
+font-family:"Manrope";
+font-size:19px;
+
+}
+
+.brand p{
+
+margin-top:3px;
+
+font-size:10px;
+color:var(--muted);
+
+}
+
+/* SERIES */
+
+.section{
+
+padding:5px 0 80px;
+
+}
+
+.section-head{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+margin-bottom:17px;
+
+}
+
+.section-head h2{
+
+font-family:"Manrope";
+font-size:18px;
+
+}
+
+.badge{
+
+padding:6px 10px;
+
+border-radius:20px;
+
+background:var(--light);
+color:var(--blue);
+
+font-size:9px;
+font-weight:800;
+
+}
+
+/* SERIES CARD */
+
+.series-card{
+
+background:white;
+
+border:1px solid var(--border);
+
+border-radius:22px;
+
+padding:25px;
+
+box-shadow:
+0 10px 30px rgba(16,33,63,.045);
+
+transition:.25s;
+
+}
+
+.series-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+0 20px 45px rgba(18,100,232,.10);
+
+}
+
+.series-label{
+
+font-size:9px;
+font-weight:800;
+letter-spacing:1px;
+
+color:var(--blue);
+
+}
+
+.series-card h3{
+
+font-family:"Manrope";
+
+font-size:26px;
+
+margin-top:7px;
+
+letter-spacing:-.8px;
+
+}
+
+.series-card p{
+
+font-size:12px;
+color:var(--muted);
+
+margin-top:7px;
+
+max-width:600px;
+
+}
+
+.info{
+
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+
+margin-top:18px;
+
+}
+
+.info span{
+
+padding:7px 10px;
+
+background:#f5f8fc;
+
+border-radius:8px;
+
+font-size:9px;
+font-weight:700;
+
+color:#61728a;
+
+}
+
+.open{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 17px;
+
+border-radius:10px;
+
+background:linear-gradient(
+145deg,
+#1264e8,
+#0750c5
+);
+
+color:white;
+
+font-size:10px;
+font-weight:800;
+
+box-shadow:
+0 4px 0 #073c9d,
+0 8px 16px rgba(18,100,232,.16);
+
+transition:.2s;
+
+}
+
+.open:hover{
+
+transform:translateY(-2px);
+
+}
+
+/* FOOTER */
+
+footer{
+
+padding:25px 0;
+
+text-align:center;
+
+background:white;
+
+border-top:1px solid var(--border);
+
+}
+
+footer p{
+
+font-size:9px;
+color:var(--muted);
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.series-card h3{
+
+font-size:23px;
+
+}
+
+.brand{
+
+align-items:flex-start;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="container nav">
+
+<a
+href="../../index.html"
+class="logo"
+>
+
+<span class="logo-icon">
+S
+</span>
+
+<span class="logo-text">
+SRINEET
+</span>
+
+</a>
+
+
+<a
+href="../index.html"
+class="back"
+>
+
+← ALL INSTITUTES
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="container">
+
+<span class="eyebrow">
+NEET TEST SERIES
+</span>
+
+<h1>
+ALLEN
+</h1>
+
+<p>
+Choose a test series and begin your
+NEET examination practice.
+</p>
+
+
+<div class="brand">
+
+<div class="brand-icon">
+ALLEN
+</div>
+
+<div>
+
+<h2>
+ALLEN NEET Test Series
+</h2>
+
+<p>
+Professional NEET test practice on SRINEET.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<h2>
+Test Series
+</h2>
+
+<span class="badge">
+01 SERIES
+</span>
+
+</div>
+
+
+<div class="series-card">
+
+<span class="series-label">
+SERIES 01
+</span>
+
+<h3>
+Leader Test Series
+</h3>
+
+<p>
+NEET Leader Test Series — complete
+examination practice with the actual
+CBT interface.
+</p>
+
+
+<div class="info">
+
+<span>
+01 Test
+</span>
+
+<span>
+180 Questions
+</span>
+
+<span>
+180 Minutes
+</span>
+
+<span>
+NEET Pattern
+</span>
+
+</div>
+
+
+<a
+href="leader/index.html"
+class="open"
+>
+
+OPEN TEST SERIES
+→
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<p>
+© 2026 SRINEET • NEET Test Series
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
