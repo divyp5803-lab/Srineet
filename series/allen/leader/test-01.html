@@ -1,1027 +1,599 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
->
-
-<title>TEST 01 | ALLEN | SRINEET</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link
-rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin
->
-
-<link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap"
-rel="stylesheet"
->
+<title>TEST 01 | ALLEN LEADER | SRINEET</title>
 
 <style>
-
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 :root{
-
-    --blue:#1264e8;
-    --blue-dark:#073c9d;
-    --blue-light:#edf5ff;
-
+    --blue:#1769e8;
+    --blue-dark:#0751c7;
+    --navy:#10233f;
     --green:#16a36a;
-    --green-light:#eafaf3;
-
-    --red:#e34b4b;
-    --red-light:#fff0f0;
-
-    --purple:#7656d6;
-    --purple-light:#f2efff;
-
-    --text:#13233f;
-    --muted:#728096;
-
-    --bg:#f4f7fb;
-    --white:#ffffff;
-
+    --purple:#7354d8;
+    --red:#df4b4b;
+    --bg:#f3f7fc;
+    --white:#fff;
     --border:#dfe7f1;
-
+    --muted:#718096;
+    --shadow:0 10px 35px rgba(20,50,90,.07);
 }
 
 body{
-
-    font-family:"Inter",sans-serif;
-
+    font-family:Arial,Helvetica,sans-serif;
     background:var(--bg);
-
-    color:var(--text);
-
-    min-height:100vh;
-
+    color:var(--navy);
 }
-
 
 /* HEADER */
 
 .header{
-
-    height:70px;
-
-    background:white;
-
+    height:72px;
+    background:#fff;
     border-bottom:1px solid var(--border);
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
-    padding:0 24px;
-
+    padding:0 25px;
     position:sticky;
-
     top:0;
-
     z-index:100;
+}
 
+.brand{
+    display:flex;
+    align-items:center;
+    gap:11px;
 }
 
 .logo{
-
+    width:40px;
+    height:40px;
+    border-radius:12px;
     display:flex;
-
     align-items:center;
-
-    gap:10px;
-
-}
-
-.logo-box{
-
-    width:38px;
-    height:38px;
-
-    border-radius:11px;
-
-    display:flex;
-
-    align-items:center;
-
     justify-content:center;
-
-    color:white;
-
-    background:
-    linear-gradient(145deg,#2b88ff,#0752c8);
-
-    font-family:"Manrope";
-
+    color:#fff;
+    font-size:20px;
     font-weight:800;
-
-    box-shadow:0 4px 0 #073c9d;
-
+    background:linear-gradient(145deg,#2581ff,#0751c7);
+    box-shadow:0 4px 0 #063b91;
 }
 
-.logo-text{
-
-    font-family:"Manrope";
-
-    font-size:18px;
-
+.brand-name{
+    font-size:19px;
     font-weight:800;
-
 }
 
-.test-title{
-
+.exam-title{
     text-align:center;
-
 }
 
-.test-title strong{
-
-    display:block;
-
-    font-family:"Manrope";
-
+.exam-title h2{
     font-size:15px;
-
+    font-weight:800;
 }
 
-.test-title span{
-
+.exam-title p{
+    margin-top:4px;
     color:var(--muted);
-
     font-size:10px;
-
 }
-
-
-/* TIMER */
 
 .timer{
-
     min-width:125px;
-
     padding:9px 13px;
-
-    border-radius:11px;
-
-    background:#f4f8ff;
-
-    border:1px solid #d8e6fb;
-
+    background:#f2f7ff;
+    border:1px solid #d9e6f9;
+    border-radius:12px;
     text-align:center;
-
 }
 
-.timer small{
-
+.timer-label{
     display:block;
-
     font-size:8px;
-
-    font-weight:800;
-
     color:var(--muted);
-
+    font-weight:800;
     letter-spacing:1px;
-
 }
 
 #timer{
-
+    display:block;
+    margin-top:2px;
     color:var(--blue);
-
-    font-family:"Manrope";
-
     font-size:20px;
-
     font-weight:800;
-
+    font-variant-numeric:tabular-nums;
 }
 
+/* MAIN */
 
-/* LAYOUT */
-
-.exam{
-
-    width:min(1400px,calc(100% - 30px));
-
+.exam-wrapper{
+    width:min(1450px,calc(100% - 30px));
     margin:18px auto;
-
     display:grid;
-
-    grid-template-columns:1fr 310px;
-
+    grid-template-columns:minmax(0,1fr) 320px;
     gap:18px;
-
 }
 
-
-/* QUESTION AREA */
-
-.question-area{
-
-    min-width:0;
-
-}
+/* QUESTION CARD */
 
 .question-card{
-
-    background:white;
-
+    background:#fff;
     border:1px solid var(--border);
-
     border-radius:18px;
-
     overflow:hidden;
-
-    box-shadow:0 8px 25px rgba(16,33,63,.04);
-
+    box-shadow:var(--shadow);
 }
 
-.question-header{
-
-    padding:18px 22px;
-
+.question-top{
+    padding:18px 23px;
     border-bottom:1px solid var(--border);
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
 }
 
-.question-number{
-
-    font-family:"Manrope";
-
+.question-title{
     font-size:17px;
-
-}
-
-.question-number span{
-
-    color:var(--blue);
-
-}
-
-.question-status{
-
-    padding:6px 9px;
-
-    border-radius:20px;
-
-    background:#f5f7fa;
-
-    color:var(--muted);
-
-    font-size:9px;
-
     font-weight:800;
-
 }
 
-.question-content{
+.question-title span{
+    color:var(--blue);
+}
 
-    padding:25px;
+.status{
+    padding:7px 11px;
+    border-radius:20px;
+    background:#f3f5f8;
+    color:#718096;
+    font-size:9px;
+    font-weight:800;
+}
 
+.question-body{
+    padding:30px 28px 34px;
+    min-height:380px;
 }
 
 .question-text{
-
     font-size:17px;
-
-    line-height:1.7;
-
     font-weight:600;
-
-    margin-bottom:24px;
-
+    line-height:1.7;
+    margin-bottom:25px;
 }
 
 .options{
-
     display:grid;
-
-    gap:12px;
-
+    gap:13px;
 }
 
 .option{
-
+    width:100%;
+    min-height:58px;
+    padding:13px 15px;
     border:1px solid var(--border);
-
     border-radius:13px;
-
-    padding:15px;
-
+    background:#fff;
     display:flex;
-
-    align-items:flex-start;
-
-    gap:12px;
-
+    align-items:center;
+    gap:13px;
     cursor:pointer;
-
-    transition:.2s;
-
-    background:white;
-
+    transition:.18s ease;
 }
 
 .option:hover{
-
-    border-color:#a9c8f5;
-
+    border-color:#9dbdea;
     background:#f8fbff;
-
+    transform:translateY(-1px);
 }
 
 .option.selected{
-
-    border-color:var(--blue);
-
-    background:var(--blue-light);
-
+    background:#edf5ff;
+    border:2px solid var(--blue);
 }
 
 .option-letter{
-
-    width:29px;
-
-    height:29px;
-
-    flex-shrink:0;
-
+    width:31px;
+    height:31px;
+    min-width:31px;
     border-radius:50%;
-
     background:#f0f3f7;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
+    color:#66758a;
     font-size:11px;
-
     font-weight:800;
-
-    color:#607089;
-
 }
 
 .option.selected .option-letter{
-
-    color:white;
-
     background:var(--blue);
-
+    color:#fff;
 }
 
 .option-text{
-
-    padding-top:4px;
-
     font-size:13px;
-
+    line-height:1.5;
 }
 
-
-/* CONTROLS */
+/* BOTTOM CONTROLS */
 
 .controls{
-
-    padding:17px 22px;
-
     border-top:1px solid var(--border);
-
+    padding:16px 20px;
     display:flex;
-
     gap:9px;
-
+    align-items:center;
     flex-wrap:wrap;
-
 }
 
 .btn{
-
     border:0;
-
     border-radius:10px;
-
-    padding:11px 15px;
-
+    padding:12px 15px;
     font-size:10px;
-
     font-weight:800;
-
     cursor:pointer;
-
-    transition:.2s;
-
+    transition:.18s;
 }
 
 .btn:hover{
-
     transform:translateY(-1px);
-
-}
-
-.btn-primary{
-
-    color:white;
-
-    background:linear-gradient(145deg,#1264e8,#0750c5);
-
-    box-shadow:0 3px 0 #073c9d;
-
 }
 
 .btn-outline{
-
-    background:white;
-
+    background:#fff;
+    color:#53657d;
     border:1px solid var(--border);
+}
 
-    color:#52647d;
-
+.btn-blue{
+    background:linear-gradient(145deg,#2581ff,#0751c7);
+    color:#fff;
+    box-shadow:0 3px 0 #063b91;
 }
 
 .btn-clear{
-
-    background:#fff6f6;
-
-    color:#d64949;
-
-    border:1px solid #f1d4d4;
-
+    background:#fff5f5;
+    color:var(--red);
+    border:1px solid #f0d5d5;
 }
 
 .btn-review{
-
-    background:var(--purple-light);
-
+    background:#f3efff;
     color:var(--purple);
-
-    border:1px solid #dfd7ff;
-
+    border:1px solid #dfd6ff;
 }
 
 .btn-submit{
-
     margin-left:auto;
-
-    background:#10213f;
-
-    color:white;
-
+    background:var(--navy);
+    color:#fff;
     box-shadow:0 3px 0 #061126;
-
 }
-
 
 /* PALETTE */
 
 .palette-card{
-
-    background:white;
-
+    background:#fff;
     border:1px solid var(--border);
-
     border-radius:18px;
-
-    padding:19px;
-
-    box-shadow:0 8px 25px rgba(16,33,63,.04);
-
+    box-shadow:var(--shadow);
+    padding:18px;
     position:sticky;
-
-    top:88px;
-
+    top:90px;
+    max-height:calc(100vh - 108px);
+    overflow:auto;
 }
 
-.palette-header{
-
+.palette-heading{
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
-    margin-bottom:15px;
-
+    padding-bottom:15px;
+    border-bottom:1px solid var(--border);
 }
 
-.palette-header h3{
-
-    font-family:"Manrope";
-
+.palette-heading h3{
     font-size:15px;
-
+    font-weight:800;
 }
 
-.palette-header span{
-
-    color:var(--muted);
-
+.palette-heading span{
     font-size:9px;
-
+    color:var(--muted);
 }
 
 .palette{
-
     display:grid;
-
-    grid-template-columns:repeat(5,1fr);
-
-    gap:8px;
-
+    grid-template-columns:repeat(6,1fr);
+    gap:7px;
+    padding-top:16px;
 }
 
 .palette-btn{
-
-    width:100%;
-
     aspect-ratio:1;
-
     border-radius:8px;
-
-    border:1px solid #dfe5ed;
-
+    border:1px solid #dfe5ec;
     background:#f7f9fb;
-
-    color:#65748a;
-
+    color:#68778b;
     font-size:9px;
-
     font-weight:800;
-
     cursor:pointer;
-
 }
 
-.palette-btn.current{
-
-    border:2px solid var(--blue);
-
-    color:var(--blue);
-
-    background:#edf5ff;
-
+.palette-btn:hover{
+    border-color:#8eb4ec;
 }
 
 .palette-btn.answered{
-
     background:var(--green);
-
-    color:white;
-
+    color:#fff;
     border-color:var(--green);
-
 }
 
 .palette-btn.review{
-
     background:var(--purple);
-
-    color:white;
-
+    color:#fff;
     border-color:var(--purple);
-
 }
 
-.palette-btn.review.answered{
-
-    background:linear-gradient(
-        135deg,
-        var(--green) 50%,
-        var(--purple) 50%
-    );
-
-    border-color:var(--purple);
-
+.palette-btn.current{
+    outline:3px solid #b9d4ff;
+    border:2px solid var(--blue);
 }
 
+.palette-btn.answered.review{
+    background:linear-gradient(135deg,var(--green) 50%,var(--purple) 50%);
+}
 
 /* LEGEND */
 
 .legend{
-
-    margin-top:20px;
-
-    padding-top:17px;
-
     border-top:1px solid var(--border);
-
+    margin-top:18px;
+    padding-top:15px;
     display:grid;
-
     gap:9px;
-
 }
 
-.legend-row{
-
+.legend-item{
     display:flex;
-
     align-items:center;
-
     gap:8px;
-
-    color:var(--muted);
-
     font-size:9px;
-
+    color:var(--muted);
 }
 
-.legend-dot{
-
+.dot{
     width:15px;
-
     height:15px;
-
     border-radius:4px;
-
 }
 
-.dot-answered{
-
+.dot-green{
     background:var(--green);
-
 }
 
-.dot-not{
-
+.dot-grey{
     background:#f7f9fb;
-
-    border:1px solid #dfe5ed;
-
+    border:1px solid #dfe5ec;
 }
 
-.dot-review{
-
+.dot-purple{
     background:var(--purple);
-
 }
 
-.dot-current{
-
+.dot-blue{
     background:#edf5ff;
-
     border:2px solid var(--blue);
-
 }
-
 
 /* MODAL */
 
 .modal{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(7,20,43,.58);
-
     display:none;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:20px;
-
+    position:fixed;
+    inset:0;
+    background:rgba(7,20,43,.62);
     z-index:500;
-
+    align-items:center;
+    justify-content:center;
+    padding:20px;
 }
 
-.modal.show{
-
+.modal.active{
     display:flex;
-
 }
 
 .modal-box{
-
-    width:min(450px,100%);
-
-    background:white;
-
+    width:min(430px,100%);
+    background:#fff;
     border-radius:20px;
-
-    padding:28px;
-
+    padding:27px;
     box-shadow:0 30px 80px rgba(0,0,0,.25);
-
 }
 
 .modal-box h2{
-
-    font-family:"Manrope";
-
     font-size:22px;
-
 }
 
 .modal-box p{
-
-    margin-top:9px;
-
+    margin-top:10px;
     color:var(--muted);
-
     font-size:12px;
-
     line-height:1.6;
-
 }
 
-.modal-buttons{
-
+.modal-actions{
     display:flex;
-
     gap:10px;
-
     margin-top:22px;
-
 }
 
-.modal-buttons button{
-
+.modal-actions button{
     flex:1;
-
 }
-
 
 /* RESULT */
 
-.result{
-
+#resultPage{
     display:none;
-
     min-height:100vh;
-
-    padding:45px 18px;
-
+    padding:40px 18px;
 }
 
-.result.show{
-
-    display:block;
-
-}
-
-.result-box{
-
+.result-container{
     width:min(950px,100%);
-
     margin:auto;
-
 }
 
-.result-head{
-
-    background:white;
-
+.result-header{
+    background:#fff;
     border:1px solid var(--border);
-
-    border-radius:22px;
-
+    border-radius:20px;
     padding:30px;
-
     text-align:center;
-
+    box-shadow:var(--shadow);
 }
 
-.result-head .check{
-
+.result-icon{
     width:60px;
-
     height:60px;
-
     margin:auto;
-
     border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:var(--green-light);
-
+    background:#eafaf3;
     color:var(--green);
-
+    display:flex;
+    align-items:center;
+    justify-content:center;
     font-size:27px;
-
+    font-weight:800;
 }
 
-.result-head h1{
-
+.result-header h1{
     margin-top:13px;
-
-    font-family:"Manrope";
-
-    font-size:28px;
-
+    font-size:27px;
 }
 
-.result-head p{
-
+.result-header p{
     margin-top:5px;
-
     color:var(--muted);
-
     font-size:11px;
-
 }
 
-.score{
-
-    margin-top:20px;
-
+.score-grid{
+    margin-top:16px;
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:12px;
-
 }
 
 .score-box{
-
-    padding:18px 10px;
-
+    background:#fff;
     border:1px solid var(--border);
-
     border-radius:15px;
-
-    background:white;
-
+    padding:19px 10px;
     text-align:center;
-
 }
 
 .score-box strong{
-
     display:block;
-
-    font-family:"Manrope";
-
     font-size:23px;
-
 }
 
 .score-box span{
-
+    display:block;
+    margin-top:4px;
     color:var(--muted);
-
     font-size:9px;
-
     font-weight:700;
-
 }
 
-.review-section{
-
-    margin-top:18px;
-
-    background:white;
-
+.review-box{
+    margin-top:17px;
+    background:#fff;
     border:1px solid var(--border);
-
-    border-radius:20px;
-
+    border-radius:18px;
     overflow:hidden;
-
 }
 
-.review-title{
-
+.review-heading{
     padding:18px;
-
     border-bottom:1px solid var(--border);
-
-    font-family:"Manrope";
-
     font-size:16px;
-
+    font-weight:800;
 }
 
 .review-item{
-
-    padding:19px;
-
+    padding:18px;
     border-bottom:1px solid var(--border);
-
 }
 
-.review-item:last-child{
-
-    border-bottom:0;
-
-}
-
-.review-q{
-
+.review-question{
     font-size:13px;
-
-    font-weight:700;
-
     line-height:1.6;
-
+    font-weight:700;
 }
 
-.review-answer{
-
-    margin-top:10px;
-
+.review-details{
+    margin-top:9px;
     display:grid;
-
     gap:5px;
-
     font-size:11px;
-
 }
 
 .correct{
-
     color:var(--green);
-
     font-weight:800;
-
 }
 
-.wrong{
-
+.incorrect{
     color:var(--red);
-
     font-weight:800;
-
 }
 
 .unattempted{
-
     color:var(--muted);
-
     font-weight:800;
-
 }
 
 .solution{
-
     margin-top:12px;
-
     padding:12px;
-
     border-radius:10px;
-
-    background:#f7f9fc;
-
-    color:#62718a;
-
+    background:#f5f8fc;
+    color:#63738a;
     font-size:10px;
-
     line-height:1.6;
-
 }
 
+/* MOBILE */
 
-/* RESPONSIVE */
+@media(max-width:950px){
 
-@media(max-width:900px){
-
-    .exam{
-
+    .exam-wrapper{
         grid-template-columns:1fr;
-
     }
 
     .palette-card{
-
-        position:static;
-
+        position:relative;
+        top:auto;
+        max-height:none;
     }
 
     .palette{
-
         grid-template-columns:repeat(10,1fr);
-
     }
 
 }
@@ -1029,908 +601,401 @@ body{
 @media(max-width:600px){
 
     .header{
-
-        padding:0 12px;
-
         height:64px;
-
+        padding:0 10px;
     }
 
-    .logo-text{
-
+    .brand-name{
         display:none;
-
     }
 
-    .test-title strong{
+    .logo{
+        width:37px;
+        height:37px;
+    }
 
-        font-size:12px;
+    .exam-title h2{
+        font-size:11px;
+    }
 
+    .exam-title p{
+        font-size:8px;
     }
 
     .timer{
-
         min-width:92px;
-
         padding:7px;
-
     }
 
     #timer{
-
-        font-size:17px;
-
+        font-size:16px;
     }
 
-    .exam{
-
-        width:calc(100% - 18px);
-
-        margin:9px auto;
-
+    .exam-wrapper{
+        width:calc(100% - 12px);
+        margin:8px auto;
     }
 
-    .question-content{
+    .question-top{
+        padding:15px;
+    }
 
-        padding:18px;
+    .question-title{
+        font-size:14px;
+    }
 
+    .question-body{
+        padding:21px 15px 25px;
+        min-height:350px;
     }
 
     .question-text{
-
         font-size:15px;
-
     }
 
     .controls{
-
-        padding:14px;
-
+        padding:13px;
     }
 
     .btn{
-
         padding:10px 11px;
-
         font-size:9px;
-
     }
 
     .btn-submit{
-
         margin-left:0;
-
         width:100%;
-
-    }
-
-    .score{
-
-        grid-template-columns:repeat(2,1fr);
-
     }
 
     .palette{
-
         grid-template-columns:repeat(8,1fr);
+    }
 
+    .score-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- EXAM -->
+<!-- ================= EXAM PAGE ================= -->
 
 <div id="examPage">
 
-
 <header class="header">
 
-<div class="logo">
+    <div class="brand">
 
-<div class="logo-box">
-S
-</div>
+        <div class="logo">S</div>
 
-<div class="logo-text">
-SRINEET
-</div>
+        <div class="brand-name">
+            SRINEET
+        </div>
 
-</div>
+    </div>
 
+    <div class="exam-title">
+        <h2>ALLEN • LEADER TEST SERIES</h2>
+        <p>TEST 01 • NEET</p>
+    </div>
 
-<div class="test-title">
-
-<strong>
-ALLEN • LEADER TEST SERIES
-</strong>
-
-<span>
-TEST 01 • NEET
-</span>
-
-</div>
-
-
-<div class="timer">
-
-<small>
-TIME LEFT
-</small>
-
-<div id="timer">
-180:00
-</div>
-
-</div>
+    <div class="timer">
+        <span class="timer-label">TIME LEFT</span>
+        <span id="timer">180:00</span>
+    </div>
 
 </header>
 
 
+<main class="exam-wrapper">
 
-<main class="exam">
+    <!-- QUESTION -->
 
+    <section>
 
-<section class="question-area">
+        <div class="question-card">
 
-<div class="question-card">
+            <div class="question-top">
 
+                <div class="question-title">
+                    Question <span id="questionNumber">1</span> of 180
+                </div>
 
-<div class="question-header">
+                <div class="status" id="questionStatus">
+                    Not Answered
+                </div>
 
-<div class="question-number">
+            </div>
 
-Question <span id="questionNumber">1</span>
-of 180
 
-</div>
+            <div class="question-body">
 
-<div
-class="question-status"
-id="questionStatus"
->
+                <div
+                    class="question-text"
+                    id="questionText"
+                ></div>
 
-Not Answered
+                <div
+                    class="options"
+                    id="options"
+                ></div>
 
-</div>
+            </div>
 
-</div>
 
+            <div class="controls">
 
-<div class="question-content">
+                <button
+                    class="btn btn-outline"
+                    onclick="previousQuestion()"
+                >
+                    ← PREVIOUS
+                </button>
 
-<div
-class="question-text"
-id="questionText"
->
-Loading question...
-</div>
+                <button
+                    class="btn btn-blue"
+                    onclick="saveNext()"
+                >
+                    SAVE & NEXT
+                </button>
 
+                <button
+                    class="btn btn-clear"
+                    onclick="clearResponse()"
+                >
+                    CLEAR
+                </button>
 
-<div
-class="options"
-id="options"
->
-</div>
+                <button
+                    class="btn btn-review"
+                    onclick="markReview()"
+                >
+                    MARK FOR REVIEW
+                </button>
 
-</div>
+                <button
+                    class="btn btn-submit"
+                    onclick="openSubmitModal()"
+                >
+                    SUBMIT TEST
+                </button>
 
+            </div>
 
-<div class="controls">
+        </div>
 
-<button
-class="btn btn-outline"
-onclick="previousQuestion()"
->
-← PREVIOUS
-</button>
+    </section>
 
 
-<button
-class="btn btn-primary"
-onclick="saveNext()"
->
-SAVE & NEXT
-</button>
+    <!-- PALETTE -->
 
+    <aside>
 
-<button
-class="btn btn-clear"
-onclick="clearResponse()"
->
-CLEAR
-</button>
+        <div class="palette-card">
 
+            <div class="palette-heading">
 
-<button
-class="btn btn-review"
-onclick="markReview()"
->
-MARK FOR REVIEW
-</button>
+                <h3>Question Palette</h3>
 
+                <span id="answeredCount">
+                    0 / 180
+                </span>
 
-<button
-class="btn btn-submit"
-onclick="openSubmitModal()"
->
-SUBMIT TEST
-</button>
+            </div>
 
-</div>
+            <div
+                class="palette"
+                id="palette"
+            ></div>
 
-</div>
 
-</section>
+            <div class="legend">
 
+                <div class="legend-item">
+                    <span class="dot dot-green"></span>
+                    Answered
+                </div>
 
+                <div class="legend-item">
+                    <span class="dot dot-grey"></span>
+                    Not Answered
+                </div>
 
-<aside>
+                <div class="legend-item">
+                    <span class="dot dot-purple"></span>
+                    Marked for Review
+                </div>
 
-<div class="palette-card">
+                <div class="legend-item">
+                    <span class="dot dot-blue"></span>
+                    Current Question
+                </div>
 
-<div class="palette-header">
+            </div>
 
-<h3>
-Question Palette
-</h3>
+        </div>
 
-<span id="answeredCount">
-0 / 180
-</span>
-
-</div>
-
-
-<div
-class="palette"
-id="palette"
->
-</div>
-
-
-<div class="legend">
-
-<div class="legend-row">
-
-<span class="legend-dot dot-answered"></span>
-
-Answered
-
-</div>
-
-
-<div class="legend-row">
-
-<span class="legend-dot dot-not"></span>
-
-Not Answered
-
-</div>
-
-
-<div class="legend-row">
-
-<span class="legend-dot dot-review"></span>
-
-Marked for Review
-
-</div>
-
-
-<div class="legend-row">
-
-<span class="legend-dot dot-current"></span>
-
-Current Question
-
-</div>
-
-</div>
-
-</div>
-
-</aside>
+    </aside>
 
 </main>
 
 </div>
 
 
-
-<!-- SUBMIT MODAL -->
+<!-- ================= SUBMIT MODAL ================= -->
 
 <div
-class="modal"
-id="submitModal"
+    class="modal"
+    id="submitModal"
 >
 
-<div class="modal-box">
+    <div class="modal-box">
 
-<h2>
-Submit Test?
-</h2>
+        <h2>Submit Test?</h2>
 
-<p id="submitMessage">
-Please check your answers before submitting.
-</p>
+        <p id="submitMessage"></p>
 
-<div class="modal-buttons">
+        <div class="modal-actions">
 
-<button
-class="btn btn-outline"
-onclick="closeSubmitModal()"
->
-CANCEL
-</button>
+            <button
+                class="btn btn-outline"
+                onclick="closeSubmitModal()"
+            >
+                CANCEL
+            </button>
 
-<button
-class="btn btn-primary"
-onclick="submitTest()"
->
-YES, SUBMIT
-</button>
+            <button
+                class="btn btn-blue"
+                onclick="submitTest()"
+            >
+                YES, SUBMIT
+            </button>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </div>
 
 
+<!-- ================= RESULT PAGE ================= -->
 
-<!-- RESULT -->
+<section id="resultPage">
 
-<section
-class="result"
-id="resultPage"
->
+<div class="result-container">
 
-<div class="result-box">
+    <div class="result-header">
 
+        <div class="result-icon">✓</div>
 
-<div class="result-head">
+        <h1>Test Submitted</h1>
 
-<div class="check">
-✓
-</div>
+        <p>
+            ALLEN • LEADER TEST SERIES • TEST 01
+        </p>
 
-<h1>
-Test Submitted
-</h1>
-
-<p>
-ALLEN • Leader Test Series • Test 01
-</p>
-
-</div>
+    </div>
 
 
-<div class="score">
+    <div class="score-grid">
+
+        <div class="score-box">
+            <strong id="marks">0</strong>
+            <span>MARKS</span>
+        </div>
+
+        <div class="score-box">
+            <strong id="correct">0</strong>
+            <span>CORRECT</span>
+        </div>
+
+        <div class="score-box">
+            <strong id="incorrect">0</strong>
+            <span>INCORRECT</span>
+        </div>
+
+        <div class="score-box">
+            <strong id="unattempted">0</strong>
+            <span>UNATTEMPTED</span>
+        </div>
+
+    </div>
 
 
-<div class="score-box">
+    <div class="review-box">
 
-<strong id="marks">
-0
-</strong>
+        <div class="review-heading">
+            Question-wise Answer Review
+        </div>
 
-<span>
-MARKS
-</span>
+        <div id="reviewList"></div>
 
-</div>
-
-
-<div class="score-box">
-
-<strong id="correct">
-0
-</strong>
-
-<span>
-CORRECT
-</span>
-
-</div>
-
-
-<div class="score-box">
-
-<strong id="incorrect">
-0
-</strong>
-
-<span>
-INCORRECT
-</span>
-
-</div>
-
-
-<div class="score-box">
-
-<strong id="unattempted">
-0
-</strong>
-
-<span>
-UNATTEMPTED
-</span>
-
-</div>
-
-</div>
-
-
-<div class="review-section">
-
-<div class="review-title">
-Question-wise Answer Review
-</div>
-
-<div id="reviewList">
-</div>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
 
-
 <script>
 
-
-/*
-==================================================
-SRINEET CBT ENGINE
-NEET MARKING:
-+4 CORRECT
--1 INCORRECT
-0 UNATTEMPTED
-==================================================
-*/
-
+/* =========================================
+   SRINEET CBT
+   ========================================= */
 
 const TOTAL_QUESTIONS = 180;
 
-
-/*
---------------------------------------------------
-DEMO QUESTIONS
---------------------------------------------------
-
-For now first 5 questions are real demo questions.
-
-Remaining questions are automatically created
-as placeholders so the complete 180-question
-CBT interface can be tested.
-
-Later we will replace these with the actual
-test paper questions.
---------------------------------------------------
-*/
-
-
 const questions = [
 
-{
-question:
-"Which organelle is known as the powerhouse of the cell?",
-
-options:[
-"Mitochondria",
-"Ribosome",
-"Golgi apparatus",
-"Lysosome"
-],
-
-answer:0,
-
-solution:
-"Mitochondria are the major site of aerobic respiration and ATP production in eukaryotic cells."
-},
-
-{
-
-question:
-"The SI unit of force is:",
-
-options:[
-"Joule",
-"Newton",
-"Watt",
-"Pascal"
-],
-
-answer:1,
-
-solution:
-"The SI unit of force is Newton (N)."
-
-},
-
-{
-
-question:
-"The pH of a neutral solution at 25°C is:",
-
-options:[
-"0",
-"5",
-"7",
-"14"
-],
-
-answer:2,
-
-solution:
-"At 25°C, a neutral aqueous solution has a pH of 7."
-
-},
-
-{
-
-question:
-"Which molecule carries genetic information in most living organisms?",
-
-options:[
-"Protein",
-"DNA",
-"Lipid",
-"Glucose"
-],
-
-answer:1,
-
-solution:
-"DNA stores and transmits hereditary genetic information in most organisms."
-
-},
-
-{
-
-question:
-"The acceleration due to gravity near Earth's surface is approximately:",
-
-options:[
-"1.8 m/s²",
-"5.6 m/s²",
-"9.8 m/s²",
-"15.2 m/s²"
-],
-
-answer:2,
-
-solution:
-"The standard approximate value of gravitational acceleration near Earth's surface is 9.8 m/s²."
-
-}
-
-];
-
-
-
-/*
-Create placeholder questions until 180.
-*/
-
-while(questions.length < TOTAL_QUESTIONS){
-
-    const n = questions.length + 1;
-
-    questions.push({
-
-        question:
-        "Demo Question " + n +
-        " — This question will be replaced by the actual ALLEN test paper.",
-
+    {
+        question:"Which organelle is known as the powerhouse of the cell?",
         options:[
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "Mitochondria",
+            "Ribosome",
+            "Golgi apparatus",
+            "Lysosome"
         ],
-
         answer:0,
-
-        solution:
-        "This is a temporary placeholder question. Actual question solution will be added with the final test paper."
-
-    });
-
-}
-
-
-
-/*
-USER ANSWERS
-
-null = not answered
-0,1,2,3 = selected option
-*/
-
-const answers =
-new Array(TOTAL_QUESTIONS).fill(null);
-
-
-/*
-MARK FOR REVIEW
-*/
-
-const review =
-new Array(TOTAL_QUESTIONS).fill(false);
-
-
-/*
-CURRENT QUESTION
-*/
-
-let currentQuestion = 0;
-
-
-/*
-TIMER
-
-180 minutes = 10800 seconds
-*/
-
-let timeLeft = 180 * 60;
-
-let timerInterval;
-
-
-
-/*
---------------------------------------------------
-LOAD QUESTION
---------------------------------------------------
-*/
-
-function loadQuestion(){
-
-    const q =
-    questions[currentQuestion];
-
-
-    document.getElementById("questionNumber")
-    .textContent =
-    currentQuestion + 1;
-
-
-    document.getElementById("questionText")
-    .textContent =
-    q.question;
-
-
-    const options =
-    document.getElementById("options");
-
-
-    options.innerHTML = "";
-
-
-    const letters =
-    ["A","B","C","D"];
-
-
-    q.options.forEach(
-    (option,index)=>{
-
-
-        const div =
-        document.createElement("div");
-
-
-        div.className = "option";
-
-
-        if(
-            answers[currentQuestion]
-            === index
-        ){
-
-            div.classList.add("selected");
-
-        }
-
-
-        div.onclick = function(){
-
-            selectOption(index);
-
-        };
-
-
-        div.innerHTML = `
-
-            <div class="option-letter">
-                ${letters[index]}
-            </div>
-
-            <div class="option-text">
-                ${option}
-            </div>
-
-        `;
-
-
-        options.appendChild(div);
-
-    });
-
-
-    updateStatus();
-
-    updatePalette();
-
-}
-
-
-
-/*
---------------------------------------------------
-SELECT OPTION
---------------------------------------------------
-*/
-
-function selectOption(index){
-
-    answers[currentQuestion] =
-    index;
-
-    loadQuestion();
-
-}
-
-
-
-/*
---------------------------------------------------
-NEXT
---------------------------------------------------
-*/
-
-function nextQuestion(){
-
-    if(
-        currentQuestion
-        < TOTAL_QUESTIONS - 1
-    ){
-
-        currentQuestion++;
-
-        loadQuestion();
-
-    }
-
-}
-
-
-
-/*
---------------------------------------------------
-PREVIOUS
---------------------------------------------------
-*/
-
-function previousQuestion(){
-
-    if(currentQuestion > 0){
-
-        currentQuestion--;
-
-        loadQuestion();
-
-    }
-
-}
-
-
-
-/*
---------------------------------------------------
-SAVE & NEXT
---------------------------------------------------
-*/
-
-function saveNext(){
-
-    nextQuestion();
-
-}
-
-
-
-/*
---------------------------------------------------
-CLEAR
---------------------------------------------------
-*/
-
-function clearResponse(){
-
-    answers[currentQuestion] =
-    null;
-
-    loadQuestion();
-
-}
-
-
-
-/*
---------------------------------------------------
-MARK FOR REVIEW
---------------------------------------------------
-*/
-
-function markReview(){
-
-    review[currentQuestion] =
-    !review[currentQuestion];
-
-    updateStatus();
-
-    updatePalette();
-
-}
-
-
-
-/*
---------------------------------------------------
-STATUS
---------------------------------------------------
-*/
-
-function updateStatus(){
-
-    const status =
-    document.getElementById("questionStatus");
-
-
-    if(review[currentQuestion]){
-
-        status.textContent =
-        "Marked for Review";
-
-        status.style.background =
-        "#f2efff";
-
-        status.style.color =
-        "#7656d6";
-
-    }
-
-    else if(
-        answers[currentQuestion] !== null
-    ){
-
-        status.textContent =
-        "Answered";
-
-        status.style.background =
-        "#eafaf3";
-
-        status.style.color =
-        "#16a36a";
-
-    }
-
-    else{
-
-        status.textContent =
-        "Not Answered";
-
-        status.style.background =
-        "#f5f7
+        solution:"Mitochondria are the major site of aerobic respiration and ATP production."
+    },
+
+    {
+        question:"The SI unit of force is:",
+        options:[
+            "Joule",
+            "Newton",
+            "Watt",
+            "Pascal"
+        ],
+        answer:1,
+        solution:"The SI unit of force is Newton (N)."
+    },
+
+    {
+        question:"The pH of a neutral solution at 25°C is:",
+        options:[
+            "0",
+            "5",
+            "7",
+            "14"
+        ],
+        answer:2,
+        solution:"At 25°C, a neutral aqueous solution has a pH of 7."
+    },
+
+    {
+        question:"Which molecule carries genetic information in most living organisms?",
+        options:[
+            "Protein",
+            "DNA",
+            "Lipid",
+            "Glucose"
+        ],
+        answer:1,
+        solution:"DNA stores and transmits hereditary genetic information."
+    },
+
+    {
