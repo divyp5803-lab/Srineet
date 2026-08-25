@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>TEST 01 | ALLEN | SRINEET</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap"
+rel="stylesheet"
+>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --blue:#1264e8;
+    --blue-dark:#073c9d;
+    --blue-light:#edf5ff;
+
+    --green:#16a36a;
+    --green-light:#eafaf3;
+
+    --red:#e34b4b;
+    --red-light:#fff0f0;
+
+    --purple:#7656d6;
+    --purple-light:#f2efff;
+
+    --text:#13233f;
+    --muted:#728096;
+
+    --bg:#f4f7fb;
+    --white:#ffffff;
+
+    --border:#dfe7f1;
+
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    min-height:100vh;
+
+}
+
+
+/* HEADER */
+
+.header{
+
+    height:70px;
+
+    background:white;
+
+    border-bottom:1px solid var(--border);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 24px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.logo-box{
+
+    width:38px;
+    height:38px;
+
+    border-radius:11px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    background:
+    linear-gradient(145deg,#2b88ff,#0752c8);
+
+    font-family:"Manrope";
+
+    font-weight:800;
+
+    box-shadow:0 4px 0 #073c9d;
+
+}
+
+.logo-text{
+
+    font-family:"Manrope";
+
+    font-size:18px;
+
+    font-weight:800;
+
+}
+
+.test-title{
+
+    text-align:center;
+
+}
+
+.test-title strong{
+
+    display:block;
+
+    font-family:"Manrope";
+
+    font-size:15px;
+
+}
+
+.test-title span{
+
+    color:var(--muted);
+
+    font-size:10px;
+
+}
+
+
+/* TIMER */
+
+.timer{
+
+    min-width:125px;
+
+    padding:9px 13px;
+
+    border-radius:11px;
+
+    background:#f4f8ff;
+
+    border:1px solid #d8e6fb;
+
+    text-align:center;
+
+}
+
+.timer small{
+
+    display:block;
+
+    font-size:8px;
+
+    font-weight:800;
+
+    color:var(--muted);
+
+    letter-spacing:1px;
+
+}
+
+#timer{
+
+    color:var(--blue);
+
+    font-family:"Manrope";
+
+    font-size:20px;
+
+    font-weight:800;
+
+}
+
+
+/* LAYOUT */
+
+.exam{
+
+    width:min(1400px,calc(100% - 30px));
+
+    margin:18px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 310px;
+
+    gap:18px;
+
+}
+
+
+/* QUESTION AREA */
+
+.question-area{
+
+    min-width:0;
+
+}
+
+.question-card{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(16,33,63,.04);
+
+}
+
+.question-header{
+
+    padding:18px 22px;
+
+    border-bottom:1px solid var(--border);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.question-number{
+
+    font-family:"Manrope";
+
+    font-size:17px;
+
+}
+
+.question-number span{
+
+    color:var(--blue);
+
+}
+
+.question-status{
+
+    padding:6px 9px;
+
+    border-radius:20px;
+
+    background:#f5f7fa;
+
+    color:var(--muted);
+
+    font-size:9px;
+
+    font-weight:800;
+
+}
+
+.question-content{
+
+    padding:25px;
+
+}
+
+.question-text{
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    font-weight:600;
+
+    margin-bottom:24px;
+
+}
+
+.options{
+
+    display:grid;
+
+    gap:12px;
+
+}
+
+.option{
+
+    border:1px solid var(--border);
+
+    border-radius:13px;
+
+    padding:15px;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    background:white;
+
+}
+
+.option:hover{
+
+    border-color:#a9c8f5;
+
+    background:#f8fbff;
+
+}
+
+.option.selected{
+
+    border-color:var(--blue);
+
+    background:var(--blue-light);
+
+}
+
+.option-letter{
+
+    width:29px;
+
+    height:29px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:#f0f3f7;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    color:#607089;
+
+}
+
+.option.selected .option-letter{
+
+    color:white;
+
+    background:var(--blue);
+
+}
+
+.option-text{
+
+    padding-top:4px;
+
+    font-size:13px;
+
+}
+
+
+/* CONTROLS */
+
+.controls{
+
+    padding:17px 22px;
+
+    border-top:1px solid var(--border);
+
+    display:flex;
+
+    gap:9px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    border:0;
+
+    border-radius:10px;
+
+    padding:11px 15px;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-1px);
+
+}
+
+.btn-primary{
+
+    color:white;
+
+    background:linear-gradient(145deg,#1264e8,#0750c5);
+
+    box-shadow:0 3px 0 #073c9d;
+
+}
+
+.btn-outline{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    color:#52647d;
+
+}
+
+.btn-clear{
+
+    background:#fff6f6;
+
+    color:#d64949;
+
+    border:1px solid #f1d4d4;
+
+}
+
+.btn-review{
+
+    background:var(--purple-light);
+
+    color:var(--purple);
+
+    border:1px solid #dfd7ff;
+
+}
+
+.btn-submit{
+
+    margin-left:auto;
+
+    background:#10213f;
+
+    color:white;
+
+    box-shadow:0 3px 0 #061126;
+
+}
+
+
+/* PALETTE */
+
+.palette-card{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:19px;
+
+    box-shadow:0 8px 25px rgba(16,33,63,.04);
+
+    position:sticky;
+
+    top:88px;
+
+}
+
+.palette-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+.palette-header h3{
+
+    font-family:"Manrope";
+
+    font-size:15px;
+
+}
+
+.palette-header span{
+
+    color:var(--muted);
+
+    font-size:9px;
+
+}
+
+.palette{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:8px;
+
+}
+
+.palette-btn{
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    border-radius:8px;
+
+    border:1px solid #dfe5ed;
+
+    background:#f7f9fb;
+
+    color:#65748a;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+}
+
+.palette-btn.current{
+
+    border:2px solid var(--blue);
+
+    color:var(--blue);
+
+    background:#edf5ff;
+
+}
+
+.palette-btn.answered{
+
+    background:var(--green);
+
+    color:white;
+
+    border-color:var(--green);
+
+}
+
+.palette-btn.review{
+
+    background:var(--purple);
+
+    color:white;
+
+    border-color:var(--purple);
+
+}
+
+.palette-btn.review.answered{
+
+    background:linear-gradient(
+        135deg,
+        var(--green) 50%,
+        var(--purple) 50%
+    );
+
+    border-color:var(--purple);
+
+}
+
+
+/* LEGEND */
+
+.legend{
+
+    margin-top:20px;
+
+    padding-top:17px;
+
+    border-top:1px solid var(--border);
+
+    display:grid;
+
+    gap:9px;
+
+}
+
+.legend-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--muted);
+
+    font-size:9px;
+
+}
+
+.legend-dot{
+
+    width:15px;
+
+    height:15px;
+
+    border-radius:4px;
+
+}
+
+.dot-answered{
+
+    background:var(--green);
+
+}
+
+.dot-not{
+
+    background:#f7f9fb;
+
+    border:1px solid #dfe5ed;
+
+}
+
+.dot-review{
+
+    background:var(--purple);
+
+}
+
+.dot-current{
+
+    background:#edf5ff;
+
+    border:2px solid var(--blue);
+
+}
+
+
+/* MODAL */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(7,20,43,.58);
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    z-index:500;
+
+}
+
+.modal.show{
+
+    display:flex;
+
+}
+
+.modal-box{
+
+    width:min(450px,100%);
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:28px;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.25);
+
+}
+
+.modal-box h2{
+
+    font-family:"Manrope";
+
+    font-size:22px;
+
+}
+
+.modal-box p{
+
+    margin-top:9px;
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    line-height:1.6;
+
+}
+
+.modal-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:22px;
+
+}
+
+.modal-buttons button{
+
+    flex:1;
+
+}
+
+
+/* RESULT */
+
+.result{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:45px 18px;
+
+}
+
+.result.show{
+
+    display:block;
+
+}
+
+.result-box{
+
+    width:min(950px,100%);
+
+    margin:auto;
+
+}
+
+.result-head{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+.result-head .check{
+
+    width:60px;
+
+    height:60px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--green-light);
+
+    color:var(--green);
+
+    font-size:27px;
+
+}
+
+.result-head h1{
+
+    margin-top:13px;
+
+    font-family:"Manrope";
+
+    font-size:28px;
+
+}
+
+.result-head p{
+
+    margin-top:5px;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+}
+
+.score{
+
+    margin-top:20px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:12px;
+
+}
+
+.score-box{
+
+    padding:18px 10px;
+
+    border:1px solid var(--border);
+
+    border-radius:15px;
+
+    background:white;
+
+    text-align:center;
+
+}
+
+.score-box strong{
+
+    display:block;
+
+    font-family:"Manrope";
+
+    font-size:23px;
+
+}
+
+.score-box span{
+
+    color:var(--muted);
+
+    font-size:9px;
+
+    font-weight:700;
+
+}
+
+.review-section{
+
+    margin-top:18px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.review-title{
+
+    padding:18px;
+
+    border-bottom:1px solid var(--border);
+
+    font-family:"Manrope";
+
+    font-size:16px;
+
+}
+
+.review-item{
+
+    padding:19px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.review-item:last-child{
+
+    border-bottom:0;
+
+}
+
+.review-q{
+
+    font-size:13px;
+
+    font-weight:700;
+
+    line-height:1.6;
+
+}
+
+.review-answer{
+
+    margin-top:10px;
+
+    display:grid;
+
+    gap:5px;
+
+    font-size:11px;
+
+}
+
+.correct{
+
+    color:var(--green);
+
+    font-weight:800;
+
+}
+
+.wrong{
+
+    color:var(--red);
+
+    font-weight:800;
+
+}
+
+.unattempted{
+
+    color:var(--muted);
+
+    font-weight:800;
+
+}
+
+.solution{
+
+    margin-top:12px;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    background:#f7f9fc;
+
+    color:#62718a;
+
+    font-size:10px;
+
+    line-height:1.6;
+
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .exam{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .palette-card{
+
+        position:static;
+
+    }
+
+    .palette{
+
+        grid-template-columns:repeat(10,1fr);
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .header{
+
+        padding:0 12px;
+
+        height:64px;
+
+    }
+
+    .logo-text{
+
+        display:none;
+
+    }
+
+    .test-title strong{
+
+        font-size:12px;
+
+    }
+
+    .timer{
+
+        min-width:92px;
+
+        padding:7px;
+
+    }
+
+    #timer{
+
+        font-size:17px;
+
+    }
+
+    .exam{
+
+        width:calc(100% - 18px);
+
+        margin:9px auto;
+
+    }
+
+    .question-content{
+
+        padding:18px;
+
+    }
+
+    .question-text{
+
+        font-size:15px;
+
+    }
+
+    .controls{
+
+        padding:14px;
+
+    }
+
+    .btn{
+
+        padding:10px 11px;
+
+        font-size:9px;
+
+    }
+
+    .btn-submit{
+
+        margin-left:0;
+
+        width:100%;
+
+    }
+
+    .score{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .palette{
+
+        grid-template-columns:repeat(8,1fr);
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- EXAM -->
+
+<div id="examPage">
+
+
+<header class="header">
+
+<div class="logo">
+
+<div class="logo-box">
+S
+</div>
+
+<div class="logo-text">
+SRINEET
+</div>
+
+</div>
+
+
+<div class="test-title">
+
+<strong>
+ALLEN • LEADER TEST SERIES
+</strong>
+
+<span>
+TEST 01 • NEET
+</span>
+
+</div>
+
+
+<div class="timer">
+
+<small>
+TIME LEFT
+</small>
+
+<div id="timer">
+180:00
+</div>
+
+</div>
+
+</header>
+
+
+
+<main class="exam">
+
+
+<section class="question-area">
+
+<div class="question-card">
+
+
+<div class="question-header">
+
+<div class="question-number">
+
+Question <span id="questionNumber">1</span>
+of 180
+
+</div>
+
+<div
+class="question-status"
+id="questionStatus"
+>
+
+Not Answered
+
+</div>
+
+</div>
+
+
+<div class="question-content">
+
+<div
+class="question-text"
+id="questionText"
+>
+Loading question...
+</div>
+
+
+<div
+class="options"
+id="options"
+>
+</div>
+
+</div>
+
+
+<div class="controls">
+
+<button
+class="btn btn-outline"
+onclick="previousQuestion()"
+>
+← PREVIOUS
+</button>
+
+
+<button
+class="btn btn-primary"
+onclick="saveNext()"
+>
+SAVE & NEXT
+</button>
+
+
+<button
+class="btn btn-clear"
+onclick="clearResponse()"
+>
+CLEAR
+</button>
+
+
+<button
+class="btn btn-review"
+onclick="markReview()"
+>
+MARK FOR REVIEW
+</button>
+
+
+<button
+class="btn btn-submit"
+onclick="openSubmitModal()"
+>
+SUBMIT TEST
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<aside>
+
+<div class="palette-card">
+
+<div class="palette-header">
+
+<h3>
+Question Palette
+</h3>
+
+<span id="answeredCount">
+0 / 180
+</span>
+
+</div>
+
+
+<div
+class="palette"
+id="palette"
+>
+</div>
+
+
+<div class="legend">
+
+<div class="legend-row">
+
+<span class="legend-dot dot-answered"></span>
+
+Answered
+
+</div>
+
+
+<div class="legend-row">
+
+<span class="legend-dot dot-not"></span>
+
+Not Answered
+
+</div>
+
+
+<div class="legend-row">
+
+<span class="legend-dot dot-review"></span>
+
+Marked for Review
+
+</div>
+
+
+<div class="legend-row">
+
+<span class="legend-dot dot-current"></span>
+
+Current Question
+
+</div>
+
+</div>
+
+</div>
+
+</aside>
+
+</main>
+
+</div>
+
+
+
+<!-- SUBMIT MODAL -->
+
+<div
+class="modal"
+id="submitModal"
+>
+
+<div class="modal-box">
+
+<h2>
+Submit Test?
+</h2>
+
+<p id="submitMessage">
+Please check your answers before submitting.
+</p>
+
+<div class="modal-buttons">
+
+<button
+class="btn btn-outline"
+onclick="closeSubmitModal()"
+>
+CANCEL
+</button>
+
+<button
+class="btn btn-primary"
+onclick="submitTest()"
+>
+YES, SUBMIT
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RESULT -->
+
+<section
+class="result"
+id="resultPage"
+>
+
+<div class="result-box">
+
+
+<div class="result-head">
+
+<div class="check">
+✓
+</div>
+
+<h1>
+Test Submitted
+</h1>
+
+<p>
+ALLEN • Leader Test Series • Test 01
+</p>
+
+</div>
+
+
+<div class="score">
+
+
+<div class="score-box">
+
+<strong id="marks">
+0
+</strong>
+
+<span>
+MARKS
+</span>
+
+</div>
+
+
+<div class="score-box">
+
+<strong id="correct">
+0
+</strong>
+
+<span>
+CORRECT
+</span>
+
+</div>
+
+
+<div class="score-box">
+
+<strong id="incorrect">
+0
+</strong>
+
+<span>
+INCORRECT
+</span>
+
+</div>
+
+
+<div class="score-box">
+
+<strong id="unattempted">
+0
+</strong>
+
+<span>
+UNATTEMPTED
+</span>
+
+</div>
+
+</div>
+
+
+<div class="review-section">
+
+<div class="review-title">
+Question-wise Answer Review
+</div>
+
+<div id="reviewList">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<script>
+
+
+/*
+==================================================
+SRINEET CBT ENGINE
+NEET MARKING:
++4 CORRECT
+-1 INCORRECT
+0 UNATTEMPTED
+==================================================
+*/
+
+
+const TOTAL_QUESTIONS = 180;
+
+
+/*
+--------------------------------------------------
+DEMO QUESTIONS
+--------------------------------------------------
+
+For now first 5 questions are real demo questions.
+
+Remaining questions are automatically created
+as placeholders so the complete 180-question
+CBT interface can be tested.
+
+Later we will replace these with the actual
+test paper questions.
+--------------------------------------------------
+*/
+
+
+const questions = [
+
+{
+question:
+"Which organelle is known as the powerhouse of the cell?",
+
+options:[
+"Mitochondria",
+"Ribosome",
+"Golgi apparatus",
+"Lysosome"
+],
+
+answer:0,
+
+solution:
+"Mitochondria are the major site of aerobic respiration and ATP production in eukaryotic cells."
+},
+
+{
+
+question:
+"The SI unit of force is:",
+
+options:[
+"Joule",
+"Newton",
+"Watt",
+"Pascal"
+],
+
+answer:1,
+
+solution:
+"The SI unit of force is Newton (N)."
+
+},
+
+{
+
+question:
+"The pH of a neutral solution at 25°C is:",
+
+options:[
+"0",
+"5",
+"7",
+"14"
+],
+
+answer:2,
+
+solution:
+"At 25°C, a neutral aqueous solution has a pH of 7."
+
+},
+
+{
+
+question:
+"Which molecule carries genetic information in most living organisms?",
+
+options:[
+"Protein",
+"DNA",
+"Lipid",
+"Glucose"
+],
+
+answer:1,
+
+solution:
+"DNA stores and transmits hereditary genetic information in most organisms."
+
+},
+
+{
+
+question:
+"The acceleration due to gravity near Earth's surface is approximately:",
+
+options:[
+"1.8 m/s²",
+"5.6 m/s²",
+"9.8 m/s²",
+"15.2 m/s²"
+],
+
+answer:2,
+
+solution:
+"The standard approximate value of gravitational acceleration near Earth's surface is 9.8 m/s²."
+
+}
+
+];
+
+
+
+/*
+Create placeholder questions until 180.
+*/
+
+while(questions.length < TOTAL_QUESTIONS){
+
+    const n = questions.length + 1;
+
+    questions.push({
+
+        question:
+        "Demo Question " + n +
+        " — This question will be replaced by the actual ALLEN test paper.",
+
+        options:[
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ],
+
+        answer:0,
+
+        solution:
+        "This is a temporary placeholder question. Actual question solution will be added with the final test paper."
+
+    });
+
+}
+
+
+
+/*
+USER ANSWERS
+
+null = not answered
+0,1,2,3 = selected option
+*/
+
+const answers =
+new Array(TOTAL_QUESTIONS).fill(null);
+
+
+/*
+MARK FOR REVIEW
+*/
+
+const review =
+new Array(TOTAL_QUESTIONS).fill(false);
+
+
+/*
+CURRENT QUESTION
+*/
+
+let currentQuestion = 0;
+
+
+/*
+TIMER
+
+180 minutes = 10800 seconds
+*/
+
+let timeLeft = 180 * 60;
+
+let timerInterval;
+
+
+
+/*
+--------------------------------------------------
+LOAD QUESTION
+--------------------------------------------------
+*/
+
+function loadQuestion(){
+
+    const q =
+    questions[currentQuestion];
+
+
+    document.getElementById("questionNumber")
+    .textContent =
+    currentQuestion + 1;
+
+
+    document.getElementById("questionText")
+    .textContent =
+    q.question;
+
+
+    const options =
+    document.getElementById("options");
+
+
+    options.innerHTML = "";
+
+
+    const letters =
+    ["A","B","C","D"];
+
+
+    q.options.forEach(
+    (option,index)=>{
+
+
+        const div =
+        document.createElement("div");
+
+
+        div.className = "option";
+
+
+        if(
+            answers[currentQuestion]
+            === index
+        ){
+
+            div.classList.add("selected");
+
+        }
+
+
+        div.onclick = function(){
+
+            selectOption(index);
+
+        };
+
+
+        div.innerHTML = `
+
+            <div class="option-letter">
+                ${letters[index]}
+            </div>
+
+            <div class="option-text">
+                ${option}
+            </div>
+
+        `;
+
+
+        options.appendChild(div);
+
+    });
+
+
+    updateStatus();
+
+    updatePalette();
+
+}
+
+
+
+/*
+--------------------------------------------------
+SELECT OPTION
+--------------------------------------------------
+*/
+
+function selectOption(index){
+
+    answers[currentQuestion] =
+    index;
+
+    loadQuestion();
+
+}
+
+
+
+/*
+--------------------------------------------------
+NEXT
+--------------------------------------------------
+*/
+
+function nextQuestion(){
+
+    if(
+        currentQuestion
+        < TOTAL_QUESTIONS - 1
+    ){
+
+        currentQuestion++;
+
+        loadQuestion();
+
+    }
+
+}
+
+
+
+/*
+--------------------------------------------------
+PREVIOUS
+--------------------------------------------------
+*/
+
+function previousQuestion(){
+
+    if(currentQuestion > 0){
+
+        currentQuestion--;
+
+        loadQuestion();
+
+    }
+
+}
+
+
+
+/*
+--------------------------------------------------
+SAVE & NEXT
+--------------------------------------------------
+*/
+
+function saveNext(){
+
+    nextQuestion();
+
+}
+
+
+
+/*
+--------------------------------------------------
+CLEAR
+--------------------------------------------------
+*/
+
+function clearResponse(){
+
+    answers[currentQuestion] =
+    null;
+
+    loadQuestion();
+
+}
+
+
+
+/*
+--------------------------------------------------
+MARK FOR REVIEW
+--------------------------------------------------
+*/
+
+function markReview(){
+
+    review[currentQuestion] =
+    !review[currentQuestion];
+
+    updateStatus();
+
+    updatePalette();
+
+}
+
+
+
+/*
+--------------------------------------------------
+STATUS
+--------------------------------------------------
+*/
+
+function updateStatus(){
+
+    const status =
+    document.getElementById("questionStatus");
+
+
+    if(review[currentQuestion]){
+
+        status.textContent =
+        "Marked for Review";
+
+        status.style.background =
+        "#f2efff";
+
+        status.style.color =
+        "#7656d6";
+
+    }
+
+    else if(
+        answers[currentQuestion] !== null
+    ){
+
+        status.textContent =
+        "Answered";
+
+        status.style.background =
+        "#eafaf3";
+
+        status.style.color =
+        "#16a36a";
+
+    }
+
+    else{
+
+        status.textContent =
+        "Not Answered";
+
+        status.style.background =
+        "#f5f7
