@@ -1,849 +1,1069 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+:root {
+    --blue: #1264e8;
+    --blue-dark: #0847b9;
+    --blue-light: #eaf3ff;
 
-    <title>SRINEET | NEET Test Series</title>
+    --text: #10213f;
+    --muted: #6d7b91;
 
-    <meta
-        name="description"
-        content="SRINEET - All India NEET Test Series and Chapterwise PYQs."
-    >
+    --white: #ffffff;
+    --background: #f7faff;
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    --border: #e3ebf5;
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    --shadow: 0 18px 45px rgba(18, 100, 232, 0.10);
+    --shadow-hover: 0 25px 55px rgba(18, 100, 232, 0.17);
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    --radius: 22px;
+}
 
-<body>
 
-    <!-- HEADER -->
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <header class="header">
 
-        <div class="container nav">
+html {
+    scroll-behavior: smooth;
+}
 
-            <a href="index.html" class="logo">
 
-                <span class="logo-mark">S</span>
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-                <span class="logo-text">
-                    SRINEET
-                </span>
 
-            </a>
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-            <div class="nav-badge">
-                NEET TEST SERIES
-            </div>
 
-        </div>
+.container {
+    width: min(1180px, calc(100% - 40px));
+    margin: auto;
+}
 
-    </header>
 
+/* ================= HEADER ================= */
 
-    <!-- HERO -->
+.header {
+    height: 78px;
 
-    <main>
+    background: rgba(255,255,255,0.94);
 
-        <section class="hero">
+    border-bottom: 1px solid var(--border);
 
-            <div class="hero-glow glow-one"></div>
-            <div class="hero-glow glow-two"></div>
+    position: sticky;
+    top: 0;
 
-            <div class="container hero-content">
+    z-index: 100;
 
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
+    backdrop-filter: blur(14px);
+}
 
-                    NEET 2027 • PREMIUM TEST SERIES
-                </div>
 
+.nav {
+    height: 100%;
 
-                <h1>
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-                    Prepare Smart.
-                    <br>
 
-                    <span>Perform Better.</span>
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
-                </h1>
+    font-family: "Manrope", sans-serif;
 
+    font-size: 20px;
+    font-weight: 800;
+}
 
-                <p class="hero-text">
 
-                    Practice with premium NEET test series inspired by
-                    leading coaching institutes and previous year questions.
+.logo-mark {
+    width: 38px;
+    height: 38px;
 
-                </p>
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    border-radius: 11px;
 
-                <a
-                    href="#test-series"
-                    class="primary-btn"
-                >
+    color: white;
 
-                    <span>
-                        All India All Institute Test Series
-                    </span>
+    background: linear-gradient(
+        145deg,
+        #2580ff,
+        #0754ce
+    );
 
-                    <span class="btn-arrow">
-                        →
-                    </span>
+    box-shadow:
+        inset 0 2px 3px rgba(255,255,255,0.35),
+        0 7px 15px rgba(18,100,232,0.25);
+}
 
-                </a>
 
-            </div>
+.logo-text {
+    color: var(--text);
+}
 
-        </section>
 
+.nav-badge {
+    padding: 8px 13px;
 
-        <!-- COUNTDOWN -->
+    border-radius: 30px;
 
-        <section class="countdown-section">
+    color: var(--blue);
+    background: var(--blue-light);
 
-            <div class="container">
+    font-size: 10px;
+    font-weight: 800;
 
-                <div class="countdown-card">
+    letter-spacing: 1px;
+}
 
-                    <div class="countdown-top">
 
-                        <div class="countdown-heading">
+/* ================= HERO ================= */
 
-                            <span class="small-label">
-                                YOUR TARGET
-                            </span>
+.hero {
+    min-height: 550px;
 
-                            <h2>
-                                NEET 2027
-                            </h2>
+    position: relative;
 
-                            <p>
-                                Every day counts. Make every test count.
-                            </p>
+    display: flex;
+    align-items: center;
 
-                        </div>
+    overflow: hidden;
 
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(54,135,255,0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f5f9ff 100%
+        );
+}
 
-                        <div class="exam-date">
-                            02 MAY 2027
-                        </div>
 
-                    </div>
+.hero-content {
+    position: relative;
+    z-index: 2;
 
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
 
-                    <div
-                        class="countdown"
-                        id="countdown"
-                    >
 
-                        <div class="time-box">
+.hero-glow {
+    position: absolute;
 
-                            <strong id="days">
-                                000
-                            </strong>
+    border-radius: 50%;
 
-                            <span>
-                                DAYS
-                            </span>
+    pointer-events: none;
+}
 
-                        </div>
 
+.glow-one {
+    width: 300px;
+    height: 300px;
 
-                        <div class="time-box">
+    right: -100px;
+    top: 80px;
 
-                            <strong id="hours">
-                                00
-                            </strong>
+    background: rgba(18,100,232,0.07);
+}
 
-                            <span>
-                                HOURS
-                            </span>
 
-                        </div>
+.glow-two {
+    width: 200px;
+    height: 200px;
 
+    left: -80px;
+    bottom: -80px;
 
-                        <div class="time-box">
+    background: rgba(18,100,232,0.05);
+}
 
-                            <strong id="minutes">
-                                00
-                            </strong>
 
-                            <span>
-                                MINUTES
-                            </span>
+.hero-badge {
+    width: fit-content;
 
-                        </div>
+    display: flex;
+    align-items: center;
+    gap: 9px;
 
+    padding: 8px 13px;
 
-                        <div class="time-box">
+    border-radius: 50px;
 
-                            <strong id="seconds">
-                                00
-                            </strong>
+    color: var(--blue);
+    background: var(--blue-light);
 
-                            <span>
-                                SECONDS
-                            </span>
+    font-size: 10px;
+    font-weight: 800;
 
-                        </div>
+    letter-spacing: 1px;
+}
 
-                    </div>
 
-                </div>
+.badge-dot {
+    width: 7px;
+    height: 7px;
 
-            </div>
+    border-radius: 50%;
 
-        </section>
+    background: var(--blue);
 
+    box-shadow:
+        0 0 0 4px rgba(18,100,232,0.10);
+}
 
-        <!-- INSTITUTE TEST SERIES -->
 
-        <section
-            class="series-section"
-            id="test-series"
-        >
+.hero h1 {
+    max-width: 800px;
 
-            <div class="container">
+    margin-top: 24px;
 
+    font-family: "Manrope", sans-serif;
 
-                <div class="section-heading">
+    font-size: clamp(48px, 7vw, 78px);
 
-                    <div>
+    line-height: 1.03;
 
-                        <span class="small-label">
-                            ALL INDIA
-                        </span>
+    letter-spacing: -3.5px;
 
-                        <h2>
-                            Institute Test Series
-                        </h2>
+    font-weight: 800;
+}
 
-                    </div>
 
+.hero h1 span {
+    color: var(--blue);
+}
 
-                    <p>
-                        Explore test series from India's leading
-                        NEET preparation platforms.
-                    </p>
 
-                </div>
+.hero-text {
+    max-width: 650px;
 
+    margin-top: 25px;
 
-                <div class="series-grid">
+    color: var(--muted);
 
+    font-size: 17px;
 
-                    <!-- ALLEN -->
+    line-height: 1.8;
+}
 
-                    <div class="series-card">
 
-                        <div class="card-top">
+/* ================= 3D BUTTON ================= */
 
-                            <span class="card-number">
-                                01
-                            </span>
+.primary-btn {
+    margin-top: 34px;
 
-                            <span class="card-tag">
-                                INSTITUTE
-                            </span>
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
 
-                        </div>
+    padding: 15px 20px 15px 23px;
 
+    color: white;
 
-                        <h3>
-                            ALLEN Test Series
-                        </h3>
+    background: linear-gradient(
+        145deg,
+        #2580ff,
+        #0753ca
+    );
 
+    border-radius: 14px;
 
-                        <p>
-                            NEET-style practice tests with a
-                            focused examination experience.
-                        </p>
+    font-size: 13px;
+    font-weight: 700;
 
+    box-shadow:
+        0 5px 0 #063e98,
+        0 13px 25px rgba(18,100,232,0.25);
 
-                        <div class="card-info">
+    transition: 0.2s ease;
 
-                            <span>
-                                Multiple Tests
-                            </span>
+    position: relative;
+    top: 0;
+}
 
-                            <span>
-                                NEET Pattern
-                            </span>
 
-                        </div>
+.primary-btn:hover {
+    top: -2px;
 
+    box-shadow:
+        0 7px 0 #063e98,
+        0 17px 30px rgba(18,100,232,0.28);
+}
 
-                        <a
-                            href="series/series-01.html"
-                            class="card-btn"
-                        >
 
-                            View Tests
+.primary-btn:active {
+    top: 3px;
 
-                            <span>
-                                →
-                            </span>
+    box-shadow:
+        0 2px 0 #063e98,
+        0 7px 15px rgba(18,100,232,0.18);
+}
 
-                        </a>
 
-                    </div>
+.btn-arrow {
+    width: 28px;
+    height: 28px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-                    <!-- AAKASH -->
+    border-radius: 8px;
 
-                    <div class="series-card">
+    background: rgba(255,255,255,0.18);
 
-                        <div class="card-top">
+    font-size: 17px;
+}
 
-                            <span class="card-number">
-                                02
-                            </span>
 
-                            <span class="card-tag">
-                                INSTITUTE
-                            </span>
+/* ================= COUNTDOWN ================= */
 
-                        </div>
+.countdown-section {
+    position: relative;
 
+    margin-top: -35px;
 
-                        <h3>
-                            Aakash Test Series
-                        </h3>
+    z-index: 5;
+}
 
 
-                        <p>
-                            Full-length and practice-oriented
-                            NEET examination tests.
-                        </p>
+.countdown-card {
+    padding: 30px;
 
+    background: white;
 
-                        <div class="card-info">
+    border: 1px solid var(--border);
 
-                            <span>
-                                Multiple Tests
-                            </span>
+    border-radius: 24px;
 
-                            <span>
-                                NEET Pattern
-                            </span>
+    box-shadow: var(--shadow);
+}
 
-                        </div>
 
+.countdown-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-                        <a
-                            href="series/series-02.html"
-                            class="card-btn"
-                        >
+    gap: 20px;
 
-                            View Tests
+    margin-bottom: 25px;
+}
 
-                            <span>
-                                →
-                            </span>
 
-                        </a>
+.small-label {
+    color: var(--blue);
 
-                    </div>
+    font-size: 10px;
+    font-weight: 800;
 
+    letter-spacing: 1.8px;
+}
 
-                    <!-- PW -->
 
-                    <div class="series-card">
+.countdown-heading h2 {
+    margin-top: 3px;
 
-                        <div class="card-top">
+    font-family: "Manrope", sans-serif;
 
-                            <span class="card-number">
-                                03
-                            </span>
+    font-size: 27px;
+    font-weight: 800;
+}
 
-                            <span class="card-tag">
-                                INSTITUTE
-                            </span>
 
-                        </div>
+.countdown-heading p {
+    margin-top: 2px;
 
+    color: var(--muted);
 
-                        <h3>
-                            PW Test Series
-                        </h3>
+    font-size: 13px;
+}
 
 
-                        <p>
-                            Practice-focused NEET tests for
-                            improving speed and accuracy.
-                        </p>
+.exam-date {
+    padding: 9px 14px;
 
+    border-radius: 10px;
 
-                        <div class="card-info">
+    background: var(--blue-light);
 
-                            <span>
-                                Multiple Tests
-                            </span>
+    color: var(--blue);
 
-                            <span>
-                                NEET Pattern
-                            </span>
+    font-size: 11px;
+    font-weight: 800;
 
-                        </div>
+    letter-spacing: 1px;
 
+    white-space: nowrap;
+}
 
-                        <a
-                            href="series/series-03.html"
-                            class="card-btn"
-                        >
 
-                            View Tests
+.countdown {
+    display: grid;
 
-                            <span>
-                                →
-                            </span>
+    grid-template-columns: repeat(4,1fr);
 
-                        </a>
+    gap: 12px;
+}
 
-                    </div>
 
+.time-box {
+    padding: 18px;
 
-                    <!-- NEETPREP -->
+    text-align: center;
 
-                    <div class="series-card">
+    background: #f7faff;
 
-                        <div class="card-top">
+    border: 1px solid var(--border);
 
-                            <span class="card-number">
-                                04
-                            </span>
+    border-radius: 15px;
+}
 
-                            <span class="card-tag">
-                                PLATFORM
-                            </span>
 
-                        </div>
+.time-box strong {
+    display: block;
 
+    font-family: "Manrope", sans-serif;
 
-                        <h3>
-                            NEETPrep Test Series
-                        </h3>
+    font-size: clamp(25px,4vw,37px);
 
+    line-height: 1;
 
-                        <p>
-                            Structured NEET practice for
-                            consistent preparation.
-                        </p>
+    font-weight: 800;
+}
 
 
-                        <div class="card-info">
+.time-box span {
+    display: block;
 
-                            <span>
-                                Multiple Tests
-                            </span>
+    margin-top: 8px;
 
-                            <span>
-                                NEET Pattern
-                            </span>
+    color: var(--muted);
 
-                        </div>
+    font-size: 9px;
+    font-weight: 800;
 
+    letter-spacing: 1.3px;
+}
 
-                        <a
-                            href="series/series-04.html"
-                            class="card-btn"
-                        >
 
-                            View Tests
+/* ================= SERIES ================= */
 
-                            <span>
-                                →
-                            </span>
+.series-section {
+    padding: 95px 0 80px;
+}
 
-                        </a>
 
-                    </div>
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 
+    gap: 30px;
 
-                    <!-- NTA -->
+    margin-bottom: 35px;
+}
 
-                    <div class="series-card">
 
-                        <div class="card-top">
+.section-heading h2 {
+    margin-top: 4px;
 
-                            <span class="card-number">
-                                05
-                            </span>
+    font-family: "Manrope", sans-serif;
 
-                            <span class="card-tag">
-                                PRACTICE
-                            </span>
+    font-size: 38px;
 
-                        </div>
+    letter-spacing: -1.5px;
 
+    font-weight: 800;
+}
 
-                        <h3>
-                            NTA Abhyas Tests
-                        </h3>
 
+.section-heading > p {
+    max-width: 390px;
 
-                        <p>
-                            NEET practice experience based on
-                            examination-oriented preparation.
-                        </p>
+    color: var(--muted);
 
+    font-size: 14px;
 
-                        <div class="card-info">
+    line-height: 1.7;
+}
 
-                            <span>
-                                Multiple Tests
-                            </span>
 
-                            <span>
-                                NEET Pattern
-                            </span>
+.series-grid {
+    display: grid;
 
-                        </div>
+    grid-template-columns: repeat(2,1fr);
 
+    gap: 18px;
+}
 
-                        <a
-                            href="series/series-05.html"
-                            class="card-btn"
-                        >
 
-                            View Tests
+/* ================= CARD ================= */
 
-                            <span>
-                                →
-                            </span>
+.series-card {
+    position: relative;
 
-                        </a>
+    padding: 26px;
 
-                    </div>
+    background: white;
 
+    border: 1px solid var(--border);
 
-                    <!-- RESONANCE -->
+    border-radius: var(--radius);
 
-                    <div class="series-card">
+    box-shadow:
+        0 8px 25px rgba(16,33,63,0.04);
 
-                        <div class="card-top">
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
 
-                            <span class="card-number">
-                                06
-                            </span>
+    overflow: hidden;
+}
 
-                            <span class="card-tag">
-                                INSTITUTE
-                            </span>
 
-                        </div>
+.series-card:hover {
+    transform: translateY(-5px);
 
+    border-color: #cbdcf4;
 
-                        <h3>
-                            Resonance Test Series
-                        </h3>
+    box-shadow: var(--shadow-hover);
+}
 
 
-                        <p>
-                            Examination-style tests designed
-                            for serious NEET aspirants.
-                        </p>
+.featured-card {
+    border-color: #c7dbf7;
 
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f5f9ff
+        );
+}
 
-                        <div class="card-info">
 
-                            <span>
-                                Multiple Tests
-                            </span>
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-                            <span>
-                                NEET Pattern
-                            </span>
+    gap: 10px;
 
-                        </div>
+    margin-bottom: 25px;
+}
 
 
-                        <a
-                            href="series/series-06.html"
-                            class="card-btn"
-                        >
+.card-number {
+    color: #9aabc2;
 
-                            View Tests
+    font-family: "Manrope", sans-serif;
 
-                            <span>
-                                →
-                            </span>
+    font-size: 13px;
 
-                        </a>
+    font-weight: 800;
+}
 
-                    </div>
 
+.card-tag {
+    padding: 6px 9px;
 
-                    <!-- MOTION -->
+    color: var(--blue);
 
-                    <div class="series-card">
+    background: var(--blue-light);
 
-                        <div class="card-top">
+    border-radius: 7px;
 
-                            <span class="card-number">
-                                07
-                            </span>
+    font-size: 8px;
+    font-weight: 800;
 
-                            <span class="card-tag">
-                                INSTITUTE
-                            </span>
+    letter-spacing: 1px;
+}
 
-                        </div>
 
+.series-card h3 {
+    font-family: "Manrope", sans-serif;
 
-                        <h3>
-                            Motion Test Series
-                        </h3>
+    font-size: 21px;
 
+    letter-spacing: -.6px;
 
-                        <p>
-                            NEET practice tests focused on
-                            accuracy and examination readiness.
-                        </p>
+    font-weight: 800;
+}
 
 
-                        <div class="card-info">
+.series-card p {
+    min-height: 49px;
 
-                            <span>
-                                Multiple Tests
-                            </span>
+    margin-top: 9px;
 
-                            <span>
-                                NEET Pattern
-                            </span>
+    color: var(--muted);
 
-                        </div>
+    font-size: 13px;
 
+    line-height: 1.7;
+}
 
-                        <a
-                            href="series/series-07.html"
-                            class="card-btn"
-                        >
 
-                            View Tests
+.card-info {
+    display: flex;
+    flex-wrap: wrap;
 
-                            <span>
-                                →
-                            </span>
+    gap: 7px;
 
-                        </a>
+    margin-top: 21px;
+}
 
-                    </div>
 
+.card-info span {
+    padding: 6px 9px;
 
-                    <!-- VEDANTU -->
+    background: #f5f8fc;
 
-                    <div class="series-card">
+    border-radius: 7px;
 
-                        <div class="card-top">
+    color: #60718a;
 
-                            <span class="card-number">
-                                08
-                            </span>
+    font-size: 9px;
+    font-weight: 700;
+}
 
-                            <span class="card-tag">
-                                PLATFORM
-                            </span>
 
-                        </div>
+.card-btn {
+    margin-top: 22px;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-                        <h3>
-                            Vedantu Test Series
-                        </h3>
+    padding: 12px 14px;
 
+    color: var(--blue);
 
-                        <p>
-                            Practice-oriented tests for
-                            improving NEET preparation.
-                        </p>
+    background: #f3f7fd;
 
+    border: 1px solid #e2ebf6;
 
-                        <div class="card-info">
+    border-radius: 11px;
 
-                            <span>
-                                Multiple Tests
-                            </span>
+    font-size: 12px;
 
-                            <span>
-                                NEET Pattern
-                            </span>
+    font-weight: 800;
 
-                        </div>
+    transition: .2s ease;
+}
 
 
-                        <a
-                            href="series/series-08.html"
-                            class="card-btn"
-                        >
+.card-btn span {
+    font-size: 17px;
 
-                            View Tests
+    transition: .2s ease;
+}
 
-                            <span>
-                                →
-                            </span>
 
-                        </a>
+.card-btn:hover {
+    color: white;
 
-                    </div>
+    background: var(--blue);
 
+    border-color: var(--blue);
 
-                    <!-- SRI CHAITANYA -->
+    box-shadow:
+        0 4px 0 var(--blue-dark),
+        0 10px 20px rgba(18,100,232,0.18);
+}
 
-                    <div class="series-card">
 
-                        <div class="card-top">
+.card-btn:hover span {
+    transform: translateX(3px);
+}
 
-                            <span class="card-number">
-                                09
-                            </span>
 
-                            <span class="card-tag">
-                                INSTITUTE
-                            </span>
+/* ================= PYQ ================= */
 
-                        </div>
+.pyq-section {
+    padding: 20px 0 100px;
+}
 
 
-                        <h3>
-                            Sri Chaitanya Test Series
-                        </h3>
+.pyq-card {
+    min-height: 300px;
 
+    position: relative;
 
-                        <p>
-                            Structured NEET practice tests
-                            for regular assessment.
-                        </p>
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    gap: 40px;
 
-                        <div class="card-info">
+    padding: 45px;
 
-                            <span>
-                                Multiple Tests
-                            </span>
+    overflow: hidden;
 
-                            <span>
-                                NEET Pattern
-                            </span>
+    border-radius: 28px;
 
-                        </div>
+    background:
+        linear-gradient(
+            135deg,
+            #0d5bd7,
+            #0848b8
+        );
 
+    box-shadow:
+        0 25px 50px rgba(18,100,232,0.20);
+}
 
-                        <a
-                            href="series/series-09.html"
-                            class="card-btn"
-                        >
 
-                            View Tests
+.pyq-content {
+    position: relative;
+    z-index: 2;
 
-                            <span>
-                                →
-                            </span>
+    max-width: 620px;
+}
 
-                        </a>
 
-                    </div>
+.pyq-content .small-label {
+    color: #bcd7ff;
+}
 
 
-                    <!-- ALL INDIA -->
+.pyq-content h2 {
+    margin-top: 8px;
 
-                    <div class="series-card featured-card">
+    color: white;
 
-                        <div class="card-top">
+    font-family: "Manrope", sans-serif;
 
-                            <span class="card-number">
-                                10
-                            </span>
+    font-size: 38px;
 
-                            <span class="card-tag">
-                                SRINEET
-                            </span>
+    line-height: 1.15;
 
-                        </div>
+    letter-spacing: -1.5px;
+}
 
 
-                        <h3>
-                            All India Mock Tests
-                        </h3>
+.pyq-content p {
+    max-width: 540px;
 
+    margin-top: 13px;
 
-                        <p>
-                            High-quality full-length mock tests
-                            for final NEET preparation.
-                        </p>
+    color: #d7e7ff;
 
+    font-size: 14px;
 
-                        <div class="card-info">
+    line-height: 1.7;
+}
 
-                            <span>
-                                180 Questions
-                            </span>
 
-                            <span>
-                                180 Minutes
-                            </span>
+.pyq-btn {
+    background: white;
 
-                        </div>
+    color: var(--blue);
 
+    box-shadow:
+        0 5px 0 #b9d2f7,
+        0 13px 25px rgba(0,0,0,0.15);
+}
 
-                        <a
-                            href="series/series-10.html"
-                            class="card-btn"
-                        >
 
-                            View Tests
+.pyq-btn:hover {
+    color: var(--blue);
 
-                            <span>
-                                →
-                            </span>
+    background: #f5f9ff;
+}
 
-                        </a>
 
-                    </div>
+.pyq-visual {
+    width: 240px;
+    height: 240px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-                </div>
+    border-radius: 50%;
 
-            </div>
+    background: rgba(255,255,255,0.08);
 
-        </section>
+    flex-shrink: 0;
+}
 
 
-        <!-- PYQ SECTION -->
+.pyq-circle {
+    width: 155px;
+    height: 155px;
 
-        <section class="pyq-section">
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            <div class="container">
+    border-radius: 50%;
 
-                <div class="pyq-card">
+    background: white;
 
+    color: var(--blue);
 
-                    <div class="pyq-content">
+    font-family: "Manrope", sans-serif;
 
-                        <span class="small-label">
-                            PREVIOUS YEAR QUESTIONS
-                        </span>
+    font-size: 30px;
 
+    font-weight: 800;
 
-                        <h2>
-                            NEET Chapterwise PYQ
-                        </h2>
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.15);
+}
 
 
-                        <p>
-                            Practice real NEET previous year questions
-                            chapter by chapter and strengthen your preparation.
-                        </p>
+/* ================= FOOTER ================= */
 
+.footer {
+    background: white;
 
-                        <a
-                            href="pyq/index.html"
-                
+    border-top: 1px solid var(--border);
+}
+
+
+.footer-content {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.footer .logo {
+    font-size: 16px;
+}
+
+
+.footer .logo-mark {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 9px;
+}
+
+
+.footer p {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width:700px) {
+
+    .container {
+        width: min(100% - 28px,1180px);
+    }
+
+
+    .header {
+        height: 68px;
+    }
+
+
+    .logo {
+        font-size: 17px;
+    }
+
+
+    .logo-mark {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    .nav-badge {
+        padding: 7px 9px;
+
+        font-size: 8px;
+    }
+
+
+    .hero {
+        min-height: 510px;
+    }
+
+
+    .hero-content {
+        padding-top: 60px;
+        padding-bottom: 65px;
+    }
+
+
+    .hero h1 {
+        margin-top: 20px;
+
+        font-size: clamp(43px,14vw,62px);
+
+        letter-spacing: -2.8px;
+    }
+
+
+    .hero-text {
+        margin-top: 20px;
+
+        font-size: 14px;
+    }
+
+
+    .primary-btn {
+        width: 100%;
+
+        justify-content: space-between;
+
+        margin-top: 27px;
+    }
+
+
+    .countdown-section {
+        margin-top: -25px;
+    }
+
+
+    .countdown-card {
+        padding: 20px;
+
+        border-radius: 19px;
+    }
+
+
+    .countdown-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .countdown {
+        gap: 7px;
+    }
+
+
+    .time-box {
+        padding: 13px 5px;
+    }
+
+
+    .time-box strong {
+        font-size: 24px;
+    }
+
+
+    .time-box span {
+        font-size: 7px;
+    }
+
+
+    .series-section {
+        padding: 70px 0 55px;
+    }
+
+
+    .section-heading {
+        display: block;
+    }
+
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+
+    .section-heading > p {
+        margin-top: 9px;
+
+        font-size: 13px;
+    }
+
+
+    .series-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .series-card {
+        padding: 22px;
+    }
+
+
+    .pyq-section {
+        padding: 15px 0 75px;
+    }
+
+
+    .pyq-card {
+        min-height: auto;
+
+        display: block;
+
+        padding: 30px 24px;
+
+        border-radius: 22px;
+    }
+
+
+    .pyq-content h2 {
+        font-size: 30px;
+    }
+
+
+    .pyq-visual {
+        width: 140px;
+        height: 140px;
+
+        margin: 35px auto 0;
+    }
+
+
+    .pyq-circle {
+        width: 95px;
+        height: 95px;
+
+        font-size: 22px;
+    }
+
+
+    .footer-content {
+        min-height: 100px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    }
