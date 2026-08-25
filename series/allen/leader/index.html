@@ -8,7 +8,11 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+rel="stylesheet"
+>
 
 <style>
 
@@ -49,7 +53,7 @@ a{
     margin:auto;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
     height:72px;
@@ -123,7 +127,7 @@ header{
     transform:translateY(-2px);
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
     padding:46px 0 28px;
@@ -155,7 +159,7 @@ header{
     line-height:1.7;
 }
 
-/* SERIES INFO */
+/* ================= SERIES INFO ================= */
 
 .series-info{
     margin-top:25px;
@@ -195,7 +199,9 @@ header{
     justify-content:center;
 
     color:var(--blue);
-    background:linear-gradient(145deg,#eef6ff,#dcecff);
+
+    background:
+        linear-gradient(145deg,#eef6ff,#dcecff);
 
     font-family:"Manrope";
     font-size:13px;
@@ -251,7 +257,7 @@ header{
     font-weight:700;
 }
 
-/* TEST SECTION */
+/* ================= TEST SECTION ================= */
 
 .section{
     padding:10px 0 80px;
@@ -282,7 +288,7 @@ header{
     font-weight:800;
 }
 
-/* TEST GRID */
+/* ================= TEST GRID ================= */
 
 .tests{
     display:grid;
@@ -290,7 +296,7 @@ header{
     gap:14px;
 }
 
-/* TEST CARD */
+/* ================= TEST CARD ================= */
 
 .test-card{
     position:relative;
@@ -320,10 +326,11 @@ header{
     width:4px;
     height:100%;
 
-    background:linear-gradient(
-        #2d8aff,
-        #0751c6
-    );
+    background:
+        linear-gradient(
+            #2d8aff,
+            #0751c6
+        );
 }
 
 .test-card:hover{
@@ -395,10 +402,11 @@ header{
     font-weight:700;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
 
 .start-btn{
     display:inline-flex;
+
     align-items:center;
     justify-content:center;
     gap:7px;
@@ -409,11 +417,12 @@ header{
 
     border-radius:10px;
 
-    background:linear-gradient(
-        145deg,
-        #1870f3,
-        #0750c5
-    );
+    background:
+        linear-gradient(
+            145deg,
+            #1870f3,
+            #0750c5
+        );
 
     color:white;
 
@@ -429,6 +438,7 @@ header{
 
 .start-btn:hover{
     transform:translateY(-2px);
+
     box-shadow:
         0 6px 0 #06398f,
         0 12px 20px rgba(18,100,232,.22);
@@ -441,7 +451,7 @@ header{
         0 2px 0 #06398f;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
     padding:26px 0;
@@ -449,6 +459,7 @@ footer{
     text-align:center;
 
     background:white;
+
     border-top:1px solid var(--border);
 }
 
@@ -457,7 +468,7 @@ footer p{
     font-size:9px;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:700px){
 
@@ -598,7 +609,7 @@ NEET Full Test Practice • SRINEET
 <div class="series-stats">
 
 <div class="stat">
-<strong>01</strong>
+<strong>02</strong>
 <span>TESTS</span>
 </div>
 
@@ -632,7 +643,7 @@ Available Tests
 </h2>
 
 <span class="badge">
-01 TEST
+02 TESTS
 </span>
 
 </div>
@@ -641,7 +652,7 @@ Available Tests
 <div class="tests">
 
 
-<!-- TEST 01 -->
+<!-- ================= TEST 01 ================= -->
 
 <article class="test-card">
 
@@ -678,7 +689,10 @@ Physics, Chemistry and Biology.
 </div>
 
 
-<a href="test.html" class="start-btn">
+<a
+href="test.html"
+class="start-btn"
+>
 
 START TEST
 
@@ -689,9 +703,9 @@ START TEST
 </article>
 
 
-<!-- FUTURE TEST 02 -->
+<!-- ================= TEST 02 ================= -->
 
-<article class="test-card" style="opacity:.62;">
+<article class="test-card">
 
 <div class="test-top">
 
@@ -699,8 +713,8 @@ START TEST
 TEST 02
 </span>
 
-<span class="status" style="background:#f1f4f8;color:#718096;">
-COMING SOON
+<span class="status">
+AVAILABLE
 </span>
 
 </div>
@@ -711,8 +725,8 @@ Leader Test 02
 </h3>
 
 <p class="test-description">
-The next Leader Test will be available
-soon on SRINEET.
+Complete NEET pattern examination with
+Physics, Chemistry and Biology.
 </p>
 
 
@@ -720,15 +734,24 @@ soon on SRINEET.
 
 <span>180 Questions</span>
 <span>180 Minutes</span>
+<span>+4 / −1</span>
 <span>NEET Pattern</span>
 
 </div>
 
 
-<span class="start-btn"
-style="background:#9aa8b8;box-shadow:0 4px 0 #718096;cursor:not-allowed;">
-COMING SOON
-</span>
+<a
+href="https://fabulous-biscuit-ffed51.netlify.app/"
+class="start-btn"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+START TEST
+
+<span>→</span>
+
+</a>
 
 </article>
 
@@ -749,4 +772,4 @@ COMING SOON
 </footer>
 
 </body>
-  </html>
+</html>
