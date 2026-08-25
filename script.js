@@ -3,7 +3,11 @@
    NEET 2027 COUNTDOWN
 ========================================= */
 
-const examDate = new Date("May 2, 2027 00:00:00").getTime();
+
+const examDate = new Date(
+    "May 2, 2027 00:00:00"
+).getTime();
+
 
 function updateCountdown() {
 
@@ -24,16 +28,22 @@ function updateCountdown() {
 
 
     const days = Math.floor(
-        difference / (1000 * 60 * 60 * 24)
+        difference /
+        (1000 * 60 * 60 * 24)
     );
+
 
     const hours = Math.floor(
-        (difference / (1000 * 60 * 60)) % 24
+        (difference /
+            (1000 * 60 * 60)) % 24
     );
 
+
     const minutes = Math.floor(
-        (difference / (1000 * 60)) % 60
+        (difference /
+            (1000 * 60)) % 60
     );
+
 
     const seconds = Math.floor(
         (difference / 1000) % 60
@@ -43,20 +53,26 @@ function updateCountdown() {
     document.getElementById("days").textContent =
         String(days).padStart(3, "0");
 
+
     document.getElementById("hours").textContent =
         String(hours).padStart(2, "0");
 
+
     document.getElementById("minutes").textContent =
         String(minutes).padStart(2, "0");
+
 
     document.getElementById("seconds").textContent =
         String(seconds).padStart(2, "0");
 }
 
 
-/* Update immediately */
+/* Start countdown */
+
 updateCountdown();
 
 
-/* Update every second */
-setInterval(updateCountdown, 1000);
+setInterval(
+    updateCountdown,
+    1000
+);
