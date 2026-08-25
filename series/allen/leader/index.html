@@ -48,6 +48,10 @@ a{
     color:inherit;
 }
 
+button{
+    font-family:inherit;
+}
+
 .container{
     width:min(1050px,calc(100% - 32px));
     margin:auto;
@@ -415,6 +419,7 @@ header{
 
     padding:11px 16px;
 
+    border:0;
     border-radius:10px;
 
     background:
@@ -428,6 +433,8 @@ header{
 
     font-size:9px;
     font-weight:800;
+
+    cursor:pointer;
 
     box-shadow:
         0 4px 0 #06398f,
@@ -668,7 +675,6 @@ AVAILABLE
 
 </div>
 
-
 <h3>
 Leader Test 01
 </h3>
@@ -677,7 +683,6 @@ Leader Test 01
 Complete NEET pattern examination with
 Physics, Chemistry and Biology.
 </p>
-
 
 <div class="test-meta">
 
@@ -688,16 +693,12 @@ Physics, Chemistry and Biology.
 
 </div>
 
-
 <a
 href="test.html"
 class="start-btn"
 >
-
 START TEST
-
 <span>→</span>
-
 </a>
 
 </article>
@@ -719,7 +720,6 @@ AVAILABLE
 
 </div>
 
-
 <h3>
 Leader Test 02
 </h3>
@@ -728,7 +728,6 @@ Leader Test 02
 Complete NEET pattern examination with
 Physics, Chemistry and Biology.
 </p>
-
 
 <div class="test-meta">
 
@@ -739,17 +738,14 @@ Physics, Chemistry and Biology.
 
 </div>
 
-
-<a
-href="https://fabulous-biscuit-ffed51.netlify.app/"
+<button
+type="button"
 class="start-btn"
+onclick="openTest02()"
 >
-
 START TEST
-
 <span>→</span>
-
-</a>
+</button>
 
 </article>
 
@@ -768,6 +764,18 @@ START TEST
 </p>
 
 </footer>
+
+
+<script>
+
+function openTest02(){
+
+    window.location.href =
+        "https://fabulous-biscuit-ffed51.netlify.app/";
+
+}
+
+</script>
 
 </body>
 </html>
