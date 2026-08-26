@@ -1,640 +1,566 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
->
-
-<title>ALLEN | SRINEET</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link
-rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin
->
-
-<link
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Leader Test Series | SRINEET</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link
 href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
 rel="stylesheet"
->
-
-<style>
+><style>
 
 :root{
-
---blue:#1264e8;
---dark:#073c9d;
---light:#edf5ff;
---text:#10213f;
---muted:#718096;
---bg:#f6f9fd;
---border:#e2eaf4;
---white:#ffffff;
-
+    --blue:#1264e8;
+    --blue-dark:#073c9d;
+    --blue-light:#edf5ff;
+    --text:#10213f;
+    --muted:#718096;
+    --bg:#f5f8fc;
+    --border:#e1e9f3;
+    --white:#ffffff;
+    --green:#16a56b;
 }
 
 *{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-
-font-family:"Inter",sans-serif;
-background:var(--bg);
-color:var(--text);
-
+    font-family:"Inter",sans-serif;
+    background:
+        radial-gradient(circle at 90% 0%,#e8f2ff 0,transparent 32%),
+        var(--bg);
+    color:var(--text);
+    min-height:100vh;
 }
 
 a{
-
-text-decoration:none;
-color:inherit;
-
+    text-decoration:none;
+    color:inherit;
 }
 
 .container{
-
-width:min(1050px,calc(100% - 32px));
-margin:auto;
-
+    width:min(1080px,calc(100% - 28px));
+    margin:auto;
 }
 
 /* HEADER */
 
 header{
-
-height:72px;
-background:rgba(255,255,255,.95);
-border-bottom:1px solid var(--border);
-position:sticky;
-top:0;
-z-index:10;
-backdrop-filter:blur(15px);
-
+    height:72px;
+    background:rgba(255,255,255,.95);
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:20;
+    backdrop-filter:blur(15px);
 }
 
 .nav{
-
-height:100%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-
-display:flex;
-align-items:center;
-gap:10px;
-
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
 .logo-icon{
-
-width:38px;
-height:38px;
-border-radius:11px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-background:linear-gradient(
-145deg,
-#2b88ff,
-#0752c8
-);
-
-color:white;
-
-font-family:"Manrope";
-font-weight:800;
-font-size:19px;
-
-box-shadow:
-0 5px 0 #073c9d,
-0 9px 20px rgba(18,100,232,.18);
-
+    width:40px;
+    height:40px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(145deg,#2c8aff,#0751c6);
+    color:white;
+    font-family:"Manrope";
+    font-size:20px;
+    font-weight:800;
+    box-shadow:
+        0 5px 0 var(--blue-dark),
+        0 10px 22px rgba(18,100,232,.20);
 }
 
 .logo-text{
-
-font-family:"Manrope";
-font-weight:800;
-font-size:19px;
-
+    font-family:"Manrope";
+    font-size:20px;
+    font-weight:800;
 }
 
 .back{
+    padding:9px 14px;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:10px;
+    color:var(--blue);
+    font-size:10px;
+    font-weight:800;
+    box-shadow:0 3px 0 #d7e2ef;
+    transition:.2s;
+}
 
-padding:8px 12px;
-
-border:1px solid var(--border);
-border-radius:9px;
-
-font-size:9px;
-font-weight:800;
-
-color:var(--blue);
-background:white;
-
+.back:hover{
+    transform:translateY(-2px);
 }
 
 /* HERO */
 
 .hero{
-
-padding:48px 0 30px;
-
+    padding:46px 0 28px;
 }
 
 .eyebrow{
-
-font-size:10px;
-font-weight:800;
-letter-spacing:2px;
-color:var(--blue);
-
+    color:var(--blue);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
 }
 
 .hero h1{
-
-font-family:"Manrope";
-
-font-size:43px;
-line-height:1.1;
-
-letter-spacing:-1.7px;
-
-margin-top:7px;
-
+    margin-top:8px;
+    font-family:"Manrope";
+    font-size:44px;
+    line-height:1.08;
+    letter-spacing:-1.7px;
 }
 
 .hero p{
-
-margin-top:10px;
-
-font-size:13px;
-color:var(--muted);
-
-max-width:600px;
-
+    max-width:650px;
+    margin-top:10px;
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.7;
 }
 
-/* BRAND */
+/* SERIES INFO */
 
-.brand{
-
-margin-top:25px;
-
-padding:20px;
-
-background:white;
-
-border:1px solid var(--border);
-
-border-radius:20px;
-
-display:flex;
-align-items:center;
-gap:17px;
-
-box-shadow:
-0 12px 35px rgba(16,33,63,.05);
-
+.series-info{
+    margin-top:25px;
+    padding:22px;
+    background:linear-gradient(145deg,#ffffff,#f4f8ff);
+    border:1px solid var(--border);
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    box-shadow:0 15px 40px rgba(16,33,63,.06);
 }
 
-.brand-icon{
-
-width:58px;
-height:58px;
-
-border-radius:16px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-background:linear-gradient(
-145deg,
-#f2f7ff,
-#e1efff
-);
-
-color:var(--blue);
-
-font-family:"Manrope";
-font-size:11px;
-font-weight:800;
-
-box-shadow:
-0 5px 0 #cbdcf1;
-
+.series-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
-.brand h2{
-
-font-family:"Manrope";
-font-size:19px;
-
+.series-icon{
+    width:58px;
+    height:58px;
+    border-radius:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--blue);
+    background:linear-gradient(145deg,#eef6ff,#dcecff);
+    font-family:"Manrope";
+    font-size:13px;
+    font-weight:800;
+    box-shadow:0 5px 0 #c7d9ee;
 }
 
-.brand p{
-
-margin-top:3px;
-
-font-size:10px;
-color:var(--muted);
-
+.series-info h2{
+    font-family:"Manrope";
+    font-size:19px;
 }
 
-/* SERIES */
+.series-info p{
+    margin-top:4px;
+    color:var(--muted);
+    font-size:10px;
+}
+
+.series-stats{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.stat{
+    min-width:80px;
+    padding:9px 12px;
+    text-align:center;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:10px;
+}
+
+.stat strong{
+    display:block;
+    font-family:"Manrope";
+    font-size:14px;
+}
+
+.stat span{
+    display:block;
+    margin-top:2px;
+    color:var(--muted);
+    font-size:8px;
+    font-weight:700;
+}
+
+/* TEST SECTION */
 
 .section{
-
-padding:5px 0 80px;
-
+    padding:10px 0 80px;
 }
 
 .section-head{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-margin-bottom:17px;
-
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:17px;
 }
 
 .section-head h2{
-
-font-family:"Manrope";
-font-size:18px;
-
+    font-family:"Manrope";
+    font-size:20px;
 }
 
 .badge{
-
-padding:6px 10px;
-
-border-radius:20px;
-
-background:var(--light);
-color:var(--blue);
-
-font-size:9px;
-font-weight:800;
-
+    padding:7px 11px;
+    background:var(--blue-light);
+    color:var(--blue);
+    border-radius:20px;
+    font-size:9px;
+    font-weight:800;
 }
 
-/* SERIES CARD */
+/* TEST GRID */
 
-.series-card{
-
-background:white;
-
-border:1px solid var(--border);
-
-border-radius:22px;
-
-padding:25px;
-
-box-shadow:
-0 10px 30px rgba(16,33,63,.045);
-
-transition:.25s;
-
+.tests{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
 }
 
-.series-card:hover{
+/* CARD */
 
-transform:translateY(-4px);
-
-box-shadow:
-0 20px 45px rgba(18,100,232,.10);
-
+.test-card{
+    position:relative;
+    padding:22px;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(16,33,63,.045);
+    transition:.25s;
+    overflow:hidden;
 }
 
-.series-label{
-
-font-size:9px;
-font-weight:800;
-letter-spacing:1px;
-
-color:var(--blue);
-
+.test-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:4px;
+    height:100%;
+    background:linear-gradient(#2d8aff,#0751c6);
 }
 
-.series-card h3{
-
-font-family:"Manrope";
-
-font-size:26px;
-
-margin-top:7px;
-
-letter-spacing:-.8px;
-
+.test-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 40px rgba(18,100,232,.12);
 }
 
-.series-card p{
-
-font-size:12px;
-color:var(--muted);
-
-margin-top:7px;
-
-max-width:600px;
-
+.test-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.info{
-
-display:flex;
-gap:8px;
-flex-wrap:wrap;
-
-margin-top:18px;
-
+.test-number{
+    color:var(--blue);
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1.2px;
 }
 
-.info span{
-
-padding:7px 10px;
-
-background:#f5f8fc;
-
-border-radius:8px;
-
-font-size:9px;
-font-weight:700;
-
-color:#61728a;
-
+.status{
+    padding:5px 8px;
+    border-radius:20px;
+    background:#eafaf3;
+    color:var(--green);
+    font-size:8px;
+    font-weight:800;
 }
 
-.open{
-
-display:inline-block;
-
-margin-top:20px;
-
-padding:12px 17px;
-
-border-radius:10px;
-
-background:linear-gradient(
-145deg,
-#1264e8,
-#0750c5
-);
-
-color:white;
-
-font-size:10px;
-font-weight:800;
-
-box-shadow:
-0 4px 0 #073c9d,
-0 8px 16px rgba(18,100,232,.16);
-
-transition:.2s;
-
+.test-card h3{
+    margin-top:9px;
+    font-family:"Manrope";
+    font-size:21px;
 }
 
-.open:hover{
+.test-description{
+    margin-top:7px;
+    color:var(--muted);
+    font-size:10px;
+    line-height:1.6;
+}
 
-transform:translateY(-2px);
+.test-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:15px;
+}
 
+.test-meta span{
+    padding:7px 9px;
+    background:#f5f8fc;
+    border-radius:8px;
+    color:#63748a;
+    font-size:8px;
+    font-weight:700;
+}
+
+/* BUTTONS */
+
+.actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+    margin-top:18px;
+}
+
+.action{
+    min-height:44px;
+    padding:10px 12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    border-radius:11px;
+    font-size:9px;
+    font-weight:800;
+    text-align:center;
+    transition:.2s;
+}
+
+.action:hover{
+    transform:translateY(-2px);
+}
+
+.pdf-btn{
+    background:#f2f6fb;
+    border:1px solid var(--border);
+    color:#42566f;
+    box-shadow:0 3px 0 #d9e2ec;
+}
+
+.pdf-btn:hover{
+    background:#eaf2fb;
+}
+
+.cbt-btn{
+    background:linear-gradient(145deg,#1870f3,#0750c5);
+    color:white;
+    box-shadow:
+        0 4px 0 #06398f,
+        0 8px 17px rgba(18,100,232,.18);
+}
+
+.cbt-btn:hover{
+    box-shadow:
+        0 6px 0 #06398f,
+        0 12px 20px rgba(18,100,232,.22);
 }
 
 /* FOOTER */
 
 footer{
-
-padding:25px 0;
-
-text-align:center;
-
-background:white;
-
-border-top:1px solid var(--border);
-
+    padding:26px 0;
+    text-align:center;
+    background:white;
+    border-top:1px solid var(--border);
 }
 
 footer p{
-
-font-size:9px;
-color:var(--muted);
-
+    color:var(--muted);
+    font-size:9px;
 }
 
 /* MOBILE */
 
-@media(max-width:600px){
+@media(max-width:700px){
 
-.hero h1{
+    .hero{
+        padding:35px 0 22px;
+    }
 
-font-size:34px;
+    .hero h1{
+        font-size:34px;
+    }
 
+    .series-info{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .series-stats{
+        width:100%;
+    }
+
+    .stat{
+        flex:1;
+    }
+
+    .tests{
+        grid-template-columns:1fr;
+    }
 }
 
-.series-card h3{
+@media(max-width:430px){
 
-font-size:23px;
+    .container{
+        width:calc(100% - 22px);
+    }
 
+    header{
+        height:64px;
+    }
+
+    .logo-icon{
+        width:36px;
+        height:36px;
+    }
+
+    .logo-text{
+        font-size:17px;
+    }
+
+    .back{
+        font-size:8px;
+        padding:8px 10px;
+    }
+
+    .hero h1{
+        font-size:31px;
+    }
+
+    .series-info{
+        padding:17px;
+        border-radius:18px;
+    }
+
+    .actions{
+        grid-template-columns:1fr;
+    }
 }
 
-.brand{
-
-align-items:flex-start;
-
-}
-
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<header>
-
-<div class="container nav">
-
-<a
-href="../../index.html"
-class="logo"
->
-
-<span class="logo-icon">
-S
-</span>
-
-<span class="logo-text">
-SRINEET
-</span>
-
-</a>
-
-
-<a
-href="../index.html"
-class="back"
->
-
-← ALL INSTITUTES
-
-</a>
-
-</div>
-
-</header>
-
-
-
-<section class="hero">
-
-<div class="container">
-
-<span class="eyebrow">
-NEET TEST SERIES
-</span>
-
-<h1>
-ALLEN
-</h1>
-
-<p>
-Choose a test series and begin your
-NEET examination practice.
-</p>
-
-
-<div class="brand">
-
-<div class="brand-icon">
-ALLEN
-</div>
-
-<div>
-
-<h2>
-ALLEN NEET Test Series
-</h2>
-
-<p>
-Professional NEET test practice on SRINEET.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section class="section">
-
-<div class="container">
-
-
-<div class="section-head">
-
-<h2>
-Test Series
-</h2>
-
-<span class="badge">
-01 SERIES
-</span>
-
-</div>
-
-
-<div class="series-card">
-
-<span class="series-label">
-SERIES 01
-</span>
-
-<h3>
+</style></head><body><header><div class="container nav"><a href="../../../index.html" class="logo">
+<span class="logo-icon">S</span>
+<span class="logo-text">SRINEET</span>
+</a><a href="../index.html" class="back">
+← ALLEN
+</a></div></header><section class="hero"><div class="container"><span class="eyebrow">
+ALLEN • NEET TEST SERIES
+</span><h1>
 Leader Test Series
-</h3>
+</h1><p>
+Practice complete NEET examination papers in two ways:
+view the original paper or attempt the professional
+SRINEET CBT examination.
+</p><div class="series-info"><div class="series-left"><div class="series-icon">
+ALLEN
+</div><div><h2>
+Leader Test Series
+</h2><p>
+Original Papers + CBT Mode • SRINEET
+</p></div></div><div class="series-stats"><div class="stat">
+<strong>02</strong>
+<span>TESTS</span>
+</div><div class="stat">
+<strong>180</strong>
+<span>QUESTIONS</span>
+</div><div class="stat">
+<strong>180</strong>
+<span>MINUTES</span>
+</div></div></div></div></section><section class="section"><div class="container"><div class="section-head"><h2>
+Available Tests
+</h2><span class="badge">
+02 TESTS
+</span></div><div class="tests"><!-- TEST 01 --><article class="test-card"><div class="test-top"><span class="test-number">
+TEST 01
+</span><span class="status">
+AVAILABLE
+</span></div><h3>
+Leader Test 01
+</h3><p class="test-description">
+Complete NEET pattern examination paper with
+Physics, Chemistry and Biology.
+</p><div class="test-meta"><span>180 Questions</span>
+<span>180 Minutes</span>
+<span>+4 / −1</span>
+<span>NEET Pattern</span>
 
-<p>
-NEET Leader Test Series — complete
-examination practice with the actual
-CBT interface.
-</p>
+</div><div class="actions"><a
+href="test-01.pdf"
+class="action pdf-btn"
+target="_blank"
+rel="noopener"
 
+«»
 
-<div class="info">
-
-<span>
-01 Test
-</span>
-
-<span>
-180 Questions
-</span>
-
-<span>
-180 Minutes
-</span>
-
-<span>
-NEET Pattern
-</span>
-
-</div>
-
-
-<a
-href="leader/index.html"
-class="open"
->
-
-OPEN TEST SERIES
-→
-
+📄 VIEW PAPER
 </a>
 
-</div>
+<a
+href="test-01.html"
+class="action cbt-btn"
 
-</div>
+«»
 
-</section>
+💻 START CBT
+</a>
 
+</div></article><!-- TEST 02 --><article class="test-card"><div class="test-top"><span class="test-number">
+TEST 02
+</span><span class="status">
+AVAILABLE
+</span></div><h3>
+Leader Test 02
+</h3><p class="test-description">
+Complete NEET pattern examination paper with
+Physics, Chemistry and Biology.
+</p><div class="test-meta"><span>180 Questions</span>
+<span>180 Minutes</span>
+<span>+4 / −1</span>
+<span>NEET Pattern</span>
 
+</div><div class="actions"><a
+href="test-02.pdf"
+class="action pdf-btn"
+target="_blank"
+rel="noopener"
 
-<footer>
+«»
 
-<p>
+📄 VIEW PAPER
+</a>
+
+<a
+href="test-02.html"
+class="action cbt-btn"
+
+«»
+
+💻 START CBT
+</a>
+
+</div></article></div></div></section><footer><p>
 © 2026 SRINEET • NEET Test Series
-</p>
-
-</footer>
-
-
-</body>
-
+</p></footer></body>
 </html>
