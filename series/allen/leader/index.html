@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Leader Test Series | SRINEET</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Leader Test Series | SRINEET</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link
 href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
 rel="stylesheet"
->
-
-<style>
+><style>
 
 :root{
     --blue:#1264e8;
@@ -36,9 +26,15 @@ rel="stylesheet"
 
 body{
     font-family:"Inter",sans-serif;
+
     background:
-        radial-gradient(circle at 90% 0%,#e8f2ff 0,transparent 32%),
+        radial-gradient(
+            circle at 90% 0%,
+            #e8f2ff 0,
+            transparent 32%
+        ),
         var(--bg);
+
     color:var(--text);
     min-height:100vh;
 }
@@ -48,29 +44,31 @@ a{
     color:inherit;
 }
 
-button{
-    font-family:inherit;
-}
-
 .container{
-    width:min(1050px,calc(100% - 32px));
+    width:min(1080px,calc(100% - 28px));
     margin:auto;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
     height:72px;
-    background:rgba(255,255,255,.94);
+
+    background:rgba(255,255,255,.95);
+
     border-bottom:1px solid var(--border);
+
     position:sticky;
     top:0;
+
     z-index:20;
+
     backdrop-filter:blur(15px);
 }
 
 .nav{
     height:100%;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -85,13 +83,19 @@ header{
 .logo-icon{
     width:40px;
     height:40px;
+
     border-radius:12px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    background:linear-gradient(145deg,#2c8aff,#0751c6);
+    background:
+        linear-gradient(
+            145deg,
+            #2c8aff,
+            #0751c6
+        );
 
     color:white;
 
@@ -114,7 +118,9 @@ header{
     padding:9px 14px;
 
     background:white;
+
     border:1px solid var(--border);
+
     border-radius:10px;
 
     color:var(--blue);
@@ -122,7 +128,8 @@ header{
     font-size:10px;
     font-weight:800;
 
-    box-shadow:0 3px 0 #d7e2ef;
+    box-shadow:
+        0 3px 0 #d7e2ef;
 
     transition:.2s;
 }
@@ -131,7 +138,7 @@ header{
     transform:translateY(-2px);
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
     padding:46px 0 28px;
@@ -139,8 +146,10 @@ header{
 
 .eyebrow{
     color:var(--blue);
+
     font-size:10px;
     font-weight:800;
+
     letter-spacing:2px;
 }
 
@@ -148,22 +157,27 @@ header{
     margin-top:8px;
 
     font-family:"Manrope";
+
     font-size:44px;
+
     line-height:1.08;
+
     letter-spacing:-1.7px;
 }
 
 .hero p{
-    max-width:620px;
+    max-width:650px;
 
     margin-top:10px;
 
     color:var(--muted);
+
     font-size:13px;
+
     line-height:1.7;
 }
 
-/* SERIES INFO */
+/* ================= SERIES INFO ================= */
 
 .series-info{
     margin-top:25px;
@@ -171,24 +185,32 @@ header{
     padding:22px;
 
     background:
-        linear-gradient(145deg,#ffffff,#f4f8ff);
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f4f8ff
+        );
 
     border:1px solid var(--border);
+
     border-radius:22px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
     gap:20px;
 
     box-shadow:
-        0 15px 40px rgba(16,33,63,.06),
-        inset 0 1px 0 rgba(255,255,255,.8);
+        0 15px 40px rgba(16,33,63,.06);
 }
 
 .series-left{
     display:flex;
     align-items:center;
+
     gap:15px;
 }
 
@@ -199,15 +221,21 @@ header{
     border-radius:17px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
     color:var(--blue);
 
     background:
-        linear-gradient(145deg,#eef6ff,#dcecff);
+        linear-gradient(
+            145deg,
+            #eef6ff,
+            #dcecff
+        );
 
     font-family:"Manrope";
+
     font-size:13px;
     font-weight:800;
 
@@ -217,18 +245,23 @@ header{
 
 .series-info h2{
     font-family:"Manrope";
+
     font-size:19px;
 }
 
 .series-info p{
     margin-top:4px;
+
     color:var(--muted);
+
     font-size:10px;
 }
 
 .series-stats{
     display:flex;
+
     gap:8px;
+
     flex-wrap:wrap;
 }
 
@@ -240,7 +273,9 @@ header{
     text-align:center;
 
     background:white;
+
     border:1px solid var(--border);
+
     border-radius:10px;
 }
 
@@ -248,6 +283,7 @@ header{
     display:block;
 
     font-family:"Manrope";
+
     font-size:14px;
 }
 
@@ -257,11 +293,13 @@ header{
     margin-top:2px;
 
     color:var(--muted);
+
     font-size:8px;
+
     font-weight:700;
 }
 
-/* TEST SECTION */
+/* ================= TEST SECTION ================= */
 
 .section{
     padding:10px 0 80px;
@@ -269,7 +307,9 @@ header{
 
 .section-head{
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     margin-bottom:17px;
@@ -277,6 +317,7 @@ header{
 
 .section-head h2{
     font-family:"Manrope";
+
     font-size:20px;
 }
 
@@ -284,32 +325,38 @@ header{
     padding:7px 11px;
 
     background:var(--blue-light);
+
     color:var(--blue);
 
     border-radius:20px;
 
     font-size:9px;
+
     font-weight:800;
 }
 
-/* TEST GRID */
+/* ================= TEST GRID ================= */
 
 .tests{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:14px;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:16px;
 }
 
-/* TEST CARD */
+/* ================= TEST CARD ================= */
 
 .test-card{
     position:relative;
 
-    padding:21px;
+    padding:22px;
 
     background:white;
 
     border:1px solid var(--border);
+
     border-radius:20px;
 
     box-shadow:
@@ -324,6 +371,7 @@ header{
     content:"";
 
     position:absolute;
+
     left:0;
     top:0;
 
@@ -346,7 +394,9 @@ header{
 
 .test-top{
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 }
 
@@ -354,7 +404,9 @@ header{
     color:var(--blue);
 
     font-size:9px;
+
     font-weight:800;
+
     letter-spacing:1.2px;
 }
 
@@ -364,31 +416,41 @@ header{
     border-radius:20px;
 
     background:#eafaf3;
+
     color:var(--green);
 
     font-size:8px;
+
     font-weight:800;
 }
 
 .test-card h3{
-    margin-top:8px;
+    margin-top:9px;
 
     font-family:"Manrope";
-    font-size:20px;
+
+    font-size:21px;
+
     letter-spacing:-.4px;
 }
 
 .test-description{
-    margin-top:6px;
+    margin-top:7px;
 
     color:var(--muted);
+
     font-size:10px;
+
     line-height:1.6;
 }
 
+/* ================= META ================= */
+
 .test-meta{
     display:flex;
+
     flex-wrap:wrap;
+
     gap:7px;
 
     margin-top:15px;
@@ -398,30 +460,77 @@ header{
     padding:7px 9px;
 
     background:#f5f8fc;
+
     border-radius:8px;
 
     color:#63748a;
 
     font-size:8px;
+
     font-weight:700;
 }
 
-/* BUTTON */
+/* ================= ACTION BUTTONS ================= */
 
-.start-btn{
-    display:inline-flex;
+.actions{
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:9px;
+
+    margin-top:18px;
+}
+
+.action{
+    min-height:44px;
+
+    padding:10px 12px;
+
+    display:flex;
 
     align-items:center;
+
     justify-content:center;
+
     gap:7px;
 
-    margin-top:17px;
+    border-radius:11px;
 
-    padding:11px 16px;
+    font-size:9px;
 
-    border:0;
-    border-radius:10px;
+    font-weight:800;
 
+    transition:.2s;
+
+    text-align:center;
+}
+
+.action:hover{
+    transform:translateY(-2px);
+}
+
+/* ORIGINAL PDF */
+
+.pdf-btn{
+    background:#f2f6fb;
+
+    border:1px solid var(--border);
+
+    color:#42566f;
+
+    box-shadow:
+        0 3px 0 #d9e2ec;
+}
+
+.pdf-btn:hover{
+    background:#eaf2fb;
+}
+
+/* CBT */
+
+.cbt-btn{
     background:
         linear-gradient(
             145deg,
@@ -431,34 +540,25 @@ header{
 
     color:white;
 
-    font-size:9px;
-    font-weight:800;
-
-    cursor:pointer;
-
     box-shadow:
         0 4px 0 #06398f,
         0 8px 17px rgba(18,100,232,.18);
-
-    transition:.2s;
 }
 
-.start-btn:hover{
-    transform:translateY(-2px);
-
+.cbt-btn:hover{
     box-shadow:
         0 6px 0 #06398f,
         0 12px 20px rgba(18,100,232,.22);
 }
 
-.start-btn:active{
+.cbt-btn:active{
     transform:translateY(2px);
 
     box-shadow:
         0 2px 0 #06398f;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
     padding:26px 0;
@@ -472,10 +572,11 @@ footer{
 
 footer p{
     color:var(--muted);
+
     font-size:9px;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:700px){
 
@@ -489,6 +590,7 @@ footer p{
 
     .series-info{
         align-items:flex-start;
+
         flex-direction:column;
     }
 
@@ -509,7 +611,7 @@ footer p{
 @media(max-width:430px){
 
     .container{
-        width:min(100% - 22px,1050px);
+        width:calc(100% - 22px);
     }
 
     header{
@@ -536,6 +638,7 @@ footer p{
 
     .series-info{
         padding:17px;
+
         border-radius:18px;
     }
 
@@ -543,239 +646,142 @@ footer p{
         align-items:flex-start;
     }
 
+    .actions{
+        grid-template-columns:1fr;
+    }
+
 }
 
-</style>
-</head>
+</style></head><body><!-- =========================================================
+     HEADER
+========================================================= --><header><div class="container nav"><a
+href="../../../index.html"
+class="logo"
 
-<body>
+«»
 
-<header>
+<span class="logo-icon">
+S
+</span><span class="logo-text">
+SRINEET
+</span></a><a
+href="../index.html"
+class="back"
 
-<div class="container nav">
+«»
 
-<a href="../../../index.html" class="logo">
-
-<span class="logo-icon">S</span>
-
-<span class="logo-text">SRINEET</span>
-
-</a>
-
-<a href="../index.html" class="back">
 ← ALLEN
-</a>
 
-</div>
-
-</header>
-
-
-<section class="hero">
-
-<div class="container">
-
-<span class="eyebrow">
+</a></div></header><!-- =========================================================
+     HERO
+========================================================= --><section class="hero"><div class="container"><span class="eyebrow">
 ALLEN • NEET TEST SERIES
-</span>
-
-<h1>
+</span><h1>
 Leader Test Series
-</h1>
-
-<p>
-Attempt the official-style NEET examination tests
-with a professional CBT experience designed for
-serious preparation.
-</p>
-
-
-<div class="series-info">
-
-<div class="series-left">
-
-<div class="series-icon">
+</h1><p>
+Practice complete NEET examination papers in two ways:
+view the original paper or attempt the professional
+SRINEET CBT examination.
+</p><div class="series-info"><div class="series-left"><div class="series-icon">
 ALLEN
-</div>
-
-<div>
-
-<h2>
+</div><div><h2>
 Leader Test Series
-</h2>
-
-<p>
-NEET Full Test Practice • SRINEET
-</p>
-
-</div>
-
-</div>
-
-
-<div class="series-stats">
-
-<div class="stat">
-<strong>02</strong>
-<span>TESTS</span>
-</div>
-
-<div class="stat">
-<strong>180</strong>
-<span>QUESTIONS</span>
-</div>
-
-<div class="stat">
-<strong>180</strong>
-<span>MINUTES</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-head">
-
-<h2>
+</h2><p>
+Original Papers + CBT Mode • SRINEET
+</p></div></div><div class="series-stats"><div class="stat"><strong>
+02
+</strong><span>
+TESTS
+</span></div><div class="stat"><strong>
+180
+</strong><span>
+QUESTIONS
+</span></div><div class="stat"><strong>
+180
+</strong><span>
+MINUTES
+</span></div></div></div></div></section><!-- =========================================================
+     AVAILABLE TESTS
+========================================================= --><section class="section"><div class="container"><div class="section-head"><h2>
 Available Tests
-</h2>
-
-<span class="badge">
+</h2><span class="badge">
 02 TESTS
-</span>
-
-</div>
-
-
-<div class="tests">
-
-
-<!-- TEST 01 -->
-
-<article class="test-card">
-
-<div class="test-top">
-
-<span class="test-number">
+</span></div><div class="tests"><!-- =====================================================
+     TEST 01
+===================================================== --><article class="test-card"><div class="test-top"><span class="test-number">
 TEST 01
-</span>
-
-<span class="status">
+</span><span class="status">
 AVAILABLE
-</span>
-
-</div>
-
-<h3>
+</span></div><h3>
 Leader Test 01
-</h3>
-
-<p class="test-description">
-Complete NEET pattern examination with
+</h3><p class="test-description">
+Complete NEET pattern examination paper with
 Physics, Chemistry and Biology.
-</p>
+</p><div class="test-meta"><span>
+180 Questions
+</span><span>
+180 Minutes
+</span><span>
++4 / −1
+</span><span>
+NEET Pattern
+</span></div><div class="actions"><!-- ORIGINAL TEST 01 PDF --><a
+href="test-paper-01.pdf"
+class="action pdf-btn"
+target="_blank"
+rel="noopener"
 
-<div class="test-meta">
+«»
 
-<span>180 Questions</span>
-<span>180 Minutes</span>
-<span>+4 / −1</span>
-<span>NEET Pattern</span>
+📄 VIEW PAPER
 
-</div>
+</a><!-- TEST 01 CBT --><a
+href="test-01.html"
+class="action cbt-btn"
 
-<a
-href="test.html"
-class="start-btn"
->
-START TEST
-<span>→</span>
-</a>
+«»
 
-</article>
+💻 START CBT
 
-
-<!-- TEST 02 -->
-
-<article class="test-card">
-
-<div class="test-top">
-
-<span class="test-number">
+</a></div></article><!-- =====================================================
+     TEST 02
+===================================================== --><article class="test-card"><div class="test-top"><span class="test-number">
 TEST 02
-</span>
-
-<span class="status">
+</span><span class="status">
 AVAILABLE
-</span>
-
-</div>
-
-<h3>
+</span></div><h3>
 Leader Test 02
-</h3>
-
-<p class="test-description">
-Complete NEET pattern examination with
+</h3><p class="test-description">
+Complete NEET pattern examination paper with
 Physics, Chemistry and Biology.
-</p>
+</p><div class="test-meta"><span>
+180 Questions
+</span><span>
+180 Minutes
+</span><span>
++4 / −1
+</span><span>
+NEET Pattern
+</span></div><div class="actions"><!-- ORIGINAL TEST 02 PDF --><a
+href="test-paper-02.pdf"
+class="action pdf-btn"
+target="_blank"
+rel="noopener"
 
-<div class="test-meta">
+«»
 
-<span>180 Questions</span>
-<span>180 Minutes</span>
-<span>+4 / −1</span>
-<span>NEET Pattern</span>
+📄 VIEW PAPER
 
-</div>
+</a><!-- TEST 02 CBT --><a
+href="test-02.html"
+class="action cbt-btn"
 
-<button
-type="button"
-class="start-btn"
-onclick="openTest02()"
->
-START TEST
-<span>→</span>
-</button>
+«»
 
-</article>
+💻 START CBT
 
-
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<p>
+</a></div></article></div></div></section><!-- =========================================================
+     FOOTER
+========================================================= --><footer><p>
 © 2026 SRINEET • NEET Test Series
-</p>
-
-</footer>
-
-
-<script>
-
-function openTest02(){
-
-    window.location.href =
-        "https://fabulous-biscuit-ffed51.netlify.app/";
-
-}
-
-</script>
-
-</body>
-</html>
+</p></footer></body></html>
